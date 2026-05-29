@@ -38,9 +38,14 @@
       <div class="problem-hero-concept" id="heroConcept"></div>
       <div class="problem-hero-text" id="problemText"></div>
       <p class="problem-hero-desc" id="heroDesc"></p>
-      <button class="solve-btn" id="solveBtn" onclick="revealSolution()">
-        Show me how to solve this <span class="solve-arrow">↓</span>
-      </button>
+      <div class="hero-btns">
+        <button class="solve-btn" id="solveBtn" onclick="revealSolution()">
+          Show me how to solve this <span class="solve-arrow">↓</span>
+        </button>
+        <button class="random-btn" onclick="loadRandom()">
+          ⚄ Random problem
+        </button>
+      </div>
     </div>
 
     <!-- Diagram (geometry only) -->

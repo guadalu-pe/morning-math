@@ -23,6 +23,18 @@ function switchSubject(key) {
   buildLesson(key);
 }
 
+// ─── Random problem ───────────────────────────────────────────────────────────
+
+function loadRandom() {
+  const { subjectKey } = getTodayLesson();   // fully random — no override
+  activeSubject = subjectKey;
+  document.querySelectorAll('.subject-pill').forEach(el => {
+    el.classList.toggle('active', el.dataset.subject === subjectKey);
+  });
+  buildLesson(subjectKey);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // ─── Reveal solution ──────────────────────────────────────────────────────────
 
 function revealSolution() {
