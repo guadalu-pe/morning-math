@@ -57,6 +57,7 @@ nav {
   color: var(--text);
   flex-shrink: 0;
   display: flex; align-items: center; gap: 7px;
+  text-decoration: none;
 }
 .nav-brand-dot {
   width: 8px; height: 8px; border-radius: 50%;
