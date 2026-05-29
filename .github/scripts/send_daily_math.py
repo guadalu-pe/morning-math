@@ -136,25 +136,31 @@ import base64
 auth = base64.b64encode(f"anystring:{API_KEY}".encode()).decode()
 headers = {"Authorization": f"Basic {auth}", "Content-Type": "application/json"}
 
-def mc_post(path, body):
+def mc_request(method, path, body=None):
     req = urllib.request.Request(
         f"{BASE_URL}{path}",
-        data=json.dumps(body).encode(),
+        data=json.dumps(body).encode() if body is not None else None,
         headers=headers,
-        method="POST",
+        method=method,
     )
-    with urllib.request.urlopen(req) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req) as r:
+            return json.loads(r.read()) if r.length != 0 else {}
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode()
+        print(f"Mailchimp API error {e.code} on {method} {path}:")
+        print(error_body)
+        raise
 
-def mc_put(path, body):
-    req = urllib.request.Request(
-        f"{BASE_URL}{path}",
-        data=json.dumps(body).encode(),
-        headers=headers,
-        method="PUT",
-    )
-    with urllib.request.urlopen(req) as r:
-        return json.loads(r.read())
+def mc_get(path):  return mc_request("GET", path)
+def mc_post(path, body=None): return mc_request("POST", path, body)
+def mc_put(path, body):  return mc_request("PUT", path, body)
+
+# ── Look up the verified from_email for this account ─────────────────────────
+
+account = mc_get("/")
+from_email = account.get("email", "")
+print(f"Account email: {from_email}")
 
 # ── Create campaign, set content, send ────────────────────────────────────────
 
@@ -167,7 +173,7 @@ campaign = mc_post("/campaigns", {
         "subject_line": f"☀️ {lesson['concept']} — Morning Math",
         "preview_text": lesson["problem"],
         "from_name": "Morning Math",
-        "reply_to": "hello@morningmath.com",
+        "reply_to": from_email,
     },
 })
 
@@ -177,5 +183,5 @@ print(f"Campaign ID: {campaign_id}")
 mc_put(f"/campaigns/{campaign_id}/content", {"html": html_body})
 print("Content set.")
 
-mc_post(f"/campaigns/{campaign_id}/actions/send", {})
+mc_post(f"/campaigns/{campaign_id}/actions/send")
 print(f"Sent! Subject: {lesson['concept']}")
