@@ -17,13 +17,24 @@ function applyTheme(subjectKey) {
 
 function switchSubject(key) {
   activeSubject = key;
-
-  // Update active pill (both nav and mobile bar)
   document.querySelectorAll('.subject-pill').forEach(el => {
     el.classList.toggle('active', el.dataset.subject === key);
   });
-
   buildLesson(key);
+}
+
+// ─── Reveal solution ──────────────────────────────────────────────────────────
+
+function revealSolution() {
+  const btn     = document.getElementById('solveBtn');
+  const section = document.getElementById('solutionSection');
+  btn.classList.add('hidden');
+  section.style.display = 'block';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    section.classList.add('visible');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+  setTimeout(() => renderStep(0, 'forward'), 300);
 }
 
 // ─── Canvas diagrams ──────────────────────────────────────────────────────────
@@ -63,7 +74,6 @@ function drawDiagram(type, color) {
     ctx.closePath();
     ctx.fillStyle = fill; ctx.fill();
     ctx.strokeStyle = stroke; ctx.stroke();
-    ctx.strokeStyle = stroke;
     ctx.strokeRect(90, H - 40, 16, 16);
     ctx.fillStyle = text; ctx.textAlign = 'center';
     ctx.fillText('a = 6', 66, H / 2);
@@ -121,7 +131,6 @@ function renderStep(index, direction = 'forward') {
 
   const step = lessonSteps[index];
 
-  // Exit animation
   card.classList.remove('visible');
   card.classList.add(direction === 'forward' ? 'exit-left' : 'exit-right');
 
@@ -134,7 +143,6 @@ function renderStep(index, direction = 'forward') {
 
     requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add('visible')));
 
-    // Rebuild trail
     trail.innerHTML = '';
     for (let i = index - 1; i >= 0; i--) {
       const t = document.createElement('div');
@@ -144,7 +152,6 @@ function renderStep(index, direction = 'forward') {
       setTimeout(() => t.classList.add('visible'), (index - 1 - i) * 55 + 80);
     }
 
-    // Buttons
     navBack.disabled = (index === 0);
     const isLast = index === totalSteps - 1;
     navNext.textContent = isLast ? 'See Answer →' : 'Next Step →';
@@ -180,20 +187,15 @@ function buildLesson(subjectKey) {
 
   applyTheme(subjectKey);
 
-  // Hero
   document.getElementById('heroEyebrow').textContent = subject.label;
-  document.getElementById('heroTitle').textContent   = lesson.concept;
+  document.getElementById('heroConcept').textContent = lesson.concept;
   document.getElementById('heroDesc').textContent    = lesson.desc;
-
-  // Problem
   document.getElementById('problemText').textContent = lesson.problem;
 
   // Diagram
   const diagramCard = document.getElementById('diagramCard');
-  const canvas      = document.getElementById('diagram');
   if (lesson.diagram) {
     diagramCard.style.display = '';
-    // Wait a tick so display:block is applied before drawing
     requestAnimationFrame(() => drawDiagram(lesson.diagram, subject.color));
   } else {
     diagramCard.style.display = 'none';
@@ -204,46 +206,43 @@ function buildLesson(subjectKey) {
   totalSteps   = lesson.steps.length;
   currentStep  = 0;
 
+  document.getElementById('answerValue').textContent = lesson.answer;
   document.getElementById('answerCard').classList.remove('visible');
   document.getElementById('stepTrail').innerHTML = '';
   document.getElementById('stepCard').classList.remove('visible', 'exit-left', 'exit-right');
 
-  // Answer
-  document.getElementById('answerValue').textContent = lesson.answer;
-
-  // Animate first step in
-  setTimeout(() => renderStep(0, 'forward'), 350);
+  // Reset reveal state
+  const btn     = document.getElementById('solveBtn');
+  const section = document.getElementById('solutionSection');
+  btn.classList.remove('hidden');
+  section.classList.remove('visible');
+  section.style.display = 'none';
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 function init() {
-  // Build nav pills
-  const navSubjects     = document.getElementById('navSubjects');
-  const mobileSubjects  = document.getElementById('mobileSubjects');
-  const d               = daysSinceEpoch();
-  const todayKey        = ROTATION[d % ROTATION.length];
+  const navSubjects    = document.getElementById('navSubjects');
+  const mobileSubjects = document.getElementById('mobileSubjects');
+  const d              = daysSinceEpoch();
+  const todayKey       = ROTATION[d % ROTATION.length];
 
   ROTATION.forEach(key => {
     const subj = SUBJECTS[key];
-
     [navSubjects, mobileSubjects].forEach(container => {
       const btn = document.createElement('button');
-      btn.className      = 'subject-pill' + (key === todayKey ? ' active' : '');
+      btn.className       = 'subject-pill' + (key === todayKey ? ' active' : '');
       btn.dataset.subject = key;
-      btn.innerHTML      = `<span class="pill-icon">${subj.icon}</span> ${subj.label}`;
+      btn.innerHTML       = `<span class="pill-icon">${subj.icon}</span> ${subj.label}`;
       btn.addEventListener('click', () => switchSubject(key));
       container.appendChild(btn);
     });
   });
 
-  // Date chip
-  const dateStr = new Date().toLocaleDateString('en-US', {
+  document.getElementById('dateChip').textContent = new Date().toLocaleDateString('en-US', {
     weekday: 'long', month: 'long', day: 'numeric'
   });
-  document.getElementById('dateChip').textContent = dateStr;
 
-  // Load today
   activeSubject = todayKey;
   buildLesson(todayKey);
 }

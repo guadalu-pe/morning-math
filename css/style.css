@@ -112,15 +112,40 @@ main {
   padding-right: 24px;
 }
 
-/* ─── Hero header ───────────────────────────────────────────────────────────── */
+/* ─── Date row ──────────────────────────────────────────────────────────────── */
 
-.hero {
+.date-row {
   text-align: center;
   margin-bottom: 40px;
-  animation: fadeUp 0.55s var(--ease) both;
+  animation: fadeUp 0.45s var(--ease) both;
 }
 
-.hero-eyebrow {
+.date-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-2);
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+.date-chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); opacity: 0.7;
+  transition: background 0.4s;
+}
+
+/* ─── Problem hero ──────────────────────────────────────────────────────────── */
+
+.problem-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeUp 0.55s 0.05s var(--ease) both;
+}
+
+.problem-hero-eyebrow {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -130,42 +155,80 @@ main {
   transition: color 0.4s;
 }
 
-.hero-title {
-  font-size: clamp(2rem, 6vw, 3.2rem);
+.problem-hero-concept {
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.08;
+  line-height: 1.1;
   color: var(--text);
-  margin-bottom: 14px;
+  margin-bottom: 28px;
 }
 
-.hero-desc {
-  font-size: 1.05rem;
+.problem-hero-text {
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.45;
+  max-width: 580px;
+  margin: 0 auto 16px;
+  padding: 28px 32px;
+  background: var(--surface);
+  border: 1.5px solid var(--border-mid);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.problem-hero-desc {
+  font-size: 0.95rem;
   color: var(--text-2);
   line-height: 1.6;
-  max-width: 520px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto 28px;
 }
 
-/* ─── Date chip ─────────────────────────────────────────────────────────────── */
-
-.date-chip {
-  display: inline-flex; align-items: center; gap: 8px;
-  margin: 0 auto 40px;
-  padding: 7px 16px;
+.solve-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px;
   border-radius: var(--radius-pill);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  font-size: 0.78rem;
-  color: var(--text-2);
-  font-weight: 500;
-  box-shadow: var(--shadow-sm);
-  animation: fadeUp 0.55s 0.08s var(--ease) both;
-  display: flex;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  transition: filter 0.2s var(--ease), transform 0.2s var(--ease),
+              box-shadow 0.2s var(--ease), background 0.4s;
 }
-.date-chip-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--accent); opacity: 0.7;
+.solve-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+}
+.solve-btn:active { transform: translateY(0); filter: brightness(0.96); }
+.solve-btn.hidden { display: none; }
+
+.solve-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s var(--ease-spring);
+}
+.solve-btn:hover .solve-arrow { transform: translateY(3px); }
+
+/* ─── Solution section ──────────────────────────────────────────────────────── */
+
+.solution-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease-spring);
+}
+.solution-section.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ─── Cards ─────────────────────────────────────────────────────────────────── */
@@ -180,9 +243,6 @@ main {
   animation: fadeUp 0.55s var(--ease) both;
 }
 
-/* Problem card */
-.problem-card { padding: 28px 32px; }
-
 .card-label {
   font-size: 0.72rem;
   font-weight: 600;
@@ -191,14 +251,6 @@ main {
   color: var(--accent);
   margin-bottom: 12px;
   transition: color 0.4s;
-}
-
-.problem-text {
-  font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--text);
-  line-height: 1.5;
 }
 
 /* Diagram canvas */
