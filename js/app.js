@@ -151,6 +151,7 @@ function renderStep(index, direction = 'forward') {
   const cardNum    = document.getElementById('stepCardNum');
   const cardAction = document.getElementById('stepCardAction');
   const cardMath   = document.getElementById('stepCardMath');
+  const cardEli5   = document.getElementById('stepCardEli5');
   const counter    = document.getElementById('stepCounter');
   const navBack    = document.getElementById('navBack');
   const navNext    = document.getElementById('navNext');
@@ -167,6 +168,7 @@ function renderStep(index, direction = 'forward') {
     cardNum.textContent    = index + 1;
     cardAction.textContent = step.action;
     cardMath.textContent   = step.math;
+    cardEli5.textContent   = step.eli5 || '';
     counter.textContent    = `${index + 1} of ${totalSteps}`;
 
     requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add('visible')));

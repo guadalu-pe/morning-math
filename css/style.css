@@ -400,6 +400,18 @@ canvas {
   letter-spacing: -0.01em;
 }
 
+.step-eli5 {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  padding: 10px 14px;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: background 0.4s, border-color 0.4s;
+}
+
 /* Trail */
 .step-trail {
   padding: 10px 28px 0;
