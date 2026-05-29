@@ -116,10 +116,17 @@
       <div class="wall-emoji">☀️</div>
       <h2 class="wall-headline">Math for breakfast?</h2>
       <p class="wall-sub">Get one fresh problem in your inbox every morning — no spam, no fluff, just one satisfying puzzle to kick off your day.</p>
-      <form class="wall-form" id="wallForm" onsubmit="handleWallSubmit(event)">
-        <input class="wall-input" id="wallEmail" type="email" placeholder="your@email.com" autocomplete="email" required />
+      <form class="wall-form" id="wallForm"
+            action="https://gmail.us12.list-manage.com/subscribe/post?u=2962c8b7452c6bedcc9d935bd&amp;id=76bbef2b2c&amp;f_id=00d559e1f0"
+            method="post" target="mc-hidden-frame" onsubmit="handleWallSubmit(event)">
+        <input class="wall-input" id="wallEmail" type="email" name="EMAIL" placeholder="your@email.com" autocomplete="email" required />
+        <!-- Mailchimp bot protection -->
+        <div style="position:absolute;left:-5000px" aria-hidden="true">
+          <input type="text" name="b_2962c8b7452c6bedcc9d935bd_76bbef2b2c" tabindex="-1" value="">
+        </div>
         <button class="wall-btn" type="submit">Send me problems ✦</button>
       </form>
+      <iframe name="mc-hidden-frame" style="display:none"></iframe>
       <div class="wall-success" id="wallSuccess">
         <span class="wall-success-icon">✦</span> You're in! See you tomorrow morning.
       </div>

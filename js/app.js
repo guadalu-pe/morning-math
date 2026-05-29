@@ -259,9 +259,9 @@ function dismissWall() {
 }
 
 function handleWallSubmit(e) {
-  e.preventDefault();
+  // Let the form post to Mailchimp via the hidden iframe, then show success UI
   const email = document.getElementById('wallEmail').value.trim();
-  if (!email) return;
+  if (!email) { e.preventDefault(); return; }
   document.getElementById('wallForm').style.display = 'none';
   document.getElementById('wallSuccess').classList.add('visible');
   localStorage.setItem('mm-signed-up', '1');
