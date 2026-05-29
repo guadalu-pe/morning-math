@@ -1,0 +1,21 @@
+name: Daily Math Problem
+
+on:
+  schedule:
+    - cron: '17 12 * * *'  # 7:17 AM ET (UTC-5). Change to '17 11 * * *' for ET during daylight saving.
+  workflow_dispatch:        # Also allows manual trigger from GitHub Actions tab
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Send daily math problem
+        env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          MAILCHIMP_LIST_ID: 76bbef2b2c
+          MAILCHIMP_SERVER: us12
+        run: python .github/scripts/send_daily_math.py
