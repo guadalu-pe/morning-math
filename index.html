@@ -18,69 +18,72 @@
     <div class="nav-subjects" id="navSubjects"></div>
   </nav>
 
-  <!-- Mobile subject bar (visible only on small screens) -->
+  <!-- Mobile subject bar -->
   <div class="mobile-subject-bar" id="mobileSubjects"></div>
 
   <!-- ── Main content ──────────────────────────────────────────────────────── -->
   <main>
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-eyebrow" id="heroEyebrow"></div>
-      <h1 class="hero-title" id="heroTitle"></h1>
-      <p class="hero-desc" id="heroDesc"></p>
-    </div>
-
     <!-- Date chip -->
-    <div style="text-align:center; margin-bottom:40px;">
+    <div class="date-row">
       <div class="date-chip">
         <div class="date-chip-dot"></div>
         <span id="dateChip"></span>
       </div>
     </div>
 
-    <!-- Problem -->
-    <div class="card problem-card" style="animation-delay:0.04s;">
-      <div class="card-label">Today's Problem</div>
-      <div class="problem-text" id="problemText"></div>
+    <!-- Problem hero -->
+    <div class="problem-hero">
+      <div class="problem-hero-eyebrow" id="heroEyebrow"></div>
+      <div class="problem-hero-concept" id="heroConcept"></div>
+      <div class="problem-hero-text" id="problemText"></div>
+      <p class="problem-hero-desc" id="heroDesc"></p>
+      <button class="solve-btn" id="solveBtn" onclick="revealSolution()">
+        Show me how to solve this <span class="solve-arrow">↓</span>
+      </button>
     </div>
 
     <!-- Diagram (geometry only) -->
-    <div class="card diagram-card" id="diagramCard" style="animation-delay:0.08s; display:none;">
+    <div class="card diagram-card" id="diagramCard" style="display:none;">
       <canvas id="diagram" width="560" height="180"></canvas>
     </div>
 
-    <!-- Step navigator -->
-    <div class="card steps-card" style="animation-delay:0.12s;">
-      <div class="steps-card-header">
-        <span class="steps-card-label">Step-by-step solution</span>
-        <span class="step-counter" id="stepCounter">1 of 4</span>
-      </div>
+    <!-- Solution (hidden until button click) -->
+    <div class="solution-section" id="solutionSection">
 
-      <div class="step-stage">
-        <div class="step-card" id="stepCard">
-          <div class="step-num" id="stepCardNum">1</div>
-          <div class="step-body">
-            <div class="step-action" id="stepCardAction"></div>
-            <div class="step-math"  id="stepCardMath"></div>
+      <!-- Step navigator -->
+      <div class="card steps-card">
+        <div class="steps-card-header">
+          <span class="steps-card-label">Step-by-step solution</span>
+          <span class="step-counter" id="stepCounter">1 of 4</span>
+        </div>
+
+        <div class="step-stage">
+          <div class="step-card" id="stepCard">
+            <div class="step-num" id="stepCardNum">1</div>
+            <div class="step-body">
+              <div class="step-action" id="stepCardAction"></div>
+              <div class="step-math"  id="stepCardMath"></div>
+            </div>
           </div>
+        </div>
+
+        <div class="step-trail" id="stepTrail"></div>
+
+        <div class="step-nav">
+          <button class="nav-btn nav-back" id="navBack" onclick="goStep(-1)" disabled>← Back</button>
+          <button class="nav-btn nav-next" id="navNext" onclick="goStep(1)">Next Step →</button>
         </div>
       </div>
 
-      <div class="step-trail" id="stepTrail"></div>
-
-      <div class="step-nav">
-        <button class="nav-btn nav-back" id="navBack" onclick="goStep(-1)" disabled>← Back</button>
-        <button class="nav-btn nav-next" id="navNext" onclick="goStep(1)">Next Step →</button>
+      <!-- Answer -->
+      <div class="card answer-card" id="answerCard">
+        <div class="answer-icon">✦</div>
+        <div class="answer-label">Answer</div>
+        <div class="answer-value" id="answerValue"></div>
+        <button class="replay-btn" onclick="replay()">↺ &nbsp;Try again</button>
       </div>
-    </div>
 
-    <!-- Answer -->
-    <div class="card answer-card" id="answerCard" style="animation-delay:0.16s;">
-      <div class="answer-icon">✦</div>
-      <div class="answer-label">Answer</div>
-      <div class="answer-value" id="answerValue"></div>
-      <button class="replay-btn" onclick="replay()">↺ &nbsp;Start over</button>
     </div>
 
   </main>
