@@ -110,6 +110,23 @@
     one concept &nbsp;·&nbsp; one problem &nbsp;·&nbsp; every morning
   </footer>
 
+  <!-- ── Email signup wall ─────────────────────────────────────────────────── -->
+  <div class="wall-overlay" id="wallOverlay">
+    <div class="wall-card" id="wallCard">
+      <div class="wall-emoji">☀️</div>
+      <h2 class="wall-headline">Math for breakfast?</h2>
+      <p class="wall-sub">Get one fresh problem in your inbox every morning — no spam, no fluff, just one satisfying puzzle to kick off your day.</p>
+      <form class="wall-form" id="wallForm" onsubmit="handleWallSubmit(event)">
+        <input class="wall-input" id="wallEmail" type="email" placeholder="your@email.com" autocomplete="email" required />
+        <button class="wall-btn" type="submit">Send me problems ✦</button>
+      </form>
+      <div class="wall-success" id="wallSuccess">
+        <span class="wall-success-icon">✦</span> You're in! See you tomorrow morning.
+      </div>
+      <button class="wall-skip" id="wallSkip" onclick="dismissWall()">nah, I'm good for now</button>
+    </div>
+  </div>
+
   <script src="js/content.js"></script>
   <script src="js/app.js"></script>
 </body>

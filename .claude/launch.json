@@ -4,7 +4,7 @@
     {
       "name": "morning-math",
       "runtimeExecutable": "/usr/bin/python3",
-      "runtimeArgs": ["/Users/guadalupe/Documents/morning-math/server.py"],
+      "runtimeArgs": ["-m", "http.server", "5500"],
       "port": 5500
     }
   ]
