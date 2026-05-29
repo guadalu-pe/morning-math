@@ -15,11 +15,8 @@
       Morning Math
     </div>
     <div class="nav-spacer"></div>
-    <div class="nav-subjects" id="navSubjects"></div>
+    <button class="nav-random-btn" onclick="loadRandom()">⚄ Random problem</button>
   </nav>
-
-  <!-- Mobile subject bar -->
-  <div class="mobile-subject-bar" id="mobileSubjects"></div>
 
   <!-- ── Main content ──────────────────────────────────────────────────────── -->
   <main>
@@ -38,14 +35,9 @@
       <div class="problem-hero-concept" id="heroConcept"></div>
       <div class="problem-hero-text" id="problemText"></div>
       <p class="problem-hero-desc" id="heroDesc"></p>
-      <div class="hero-btns">
-        <button class="solve-btn" id="solveBtn" onclick="revealSolution()">
-          Show me how to solve this <span class="solve-arrow">↓</span>
-        </button>
-        <button class="random-btn" onclick="loadRandom()">
-          ⚄ Random problem
-        </button>
-      </div>
+      <button class="solve-btn" id="solveBtn" onclick="revealSolution()">
+        Show me how to solve this <span class="solve-arrow">↓</span>
+      </button>
     </div>
 
     <!-- Diagram (geometry only) -->

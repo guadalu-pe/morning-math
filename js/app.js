@@ -13,24 +13,11 @@ function applyTheme(subjectKey) {
   if (dot) dot.style.background = SUBJECTS[subjectKey].color;
 }
 
-// ─── Subject switcher ─────────────────────────────────────────────────────────
-
-function switchSubject(key) {
-  activeSubject = key;
-  document.querySelectorAll('.subject-pill').forEach(el => {
-    el.classList.toggle('active', el.dataset.subject === key);
-  });
-  buildLesson(key);
-}
-
 // ─── Random problem ───────────────────────────────────────────────────────────
 
 function loadRandom() {
-  const { subjectKey } = getTodayLesson();   // fully random — no override
+  const { subjectKey } = getTodayLesson();   // fully random — subject is a surprise
   activeSubject = subjectKey;
-  document.querySelectorAll('.subject-pill').forEach(el => {
-    el.classList.toggle('active', el.dataset.subject === subjectKey);
-  });
   buildLesson(subjectKey);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -234,22 +221,6 @@ function buildLesson(subjectKey) {
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 function init() {
-  const navSubjects    = document.getElementById('navSubjects');
-  const mobileSubjects = document.getElementById('mobileSubjects');
-
-  // Pick a random subject for the initial load; no subject is pre-highlighted
-  ROTATION.forEach(key => {
-    const subj = SUBJECTS[key];
-    [navSubjects, mobileSubjects].forEach(container => {
-      const btn = document.createElement('button');
-      btn.className       = 'subject-pill';
-      btn.dataset.subject = key;
-      btn.innerHTML       = `<span class="pill-icon">${subj.icon}</span> ${subj.label}`;
-      btn.addEventListener('click', () => switchSubject(key));
-      container.appendChild(btn);
-    });
-  });
-
   document.getElementById('dateChip').textContent = new Date().toLocaleDateString('en-US', {
     weekday: 'long', month: 'long', day: 'numeric'
   });
@@ -257,10 +228,6 @@ function init() {
   // Load a fully random lesson on every page open
   const { subjectKey } = getTodayLesson();
   activeSubject = subjectKey;
-  // Highlight the pill for the randomly chosen subject
-  document.querySelectorAll('.subject-pill').forEach(el => {
-    el.classList.toggle('active', el.dataset.subject === subjectKey);
-  });
   buildLesson(subjectKey);
 }
 
