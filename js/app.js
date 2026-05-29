@@ -7,10 +7,39 @@ let activeSubject = null;
 
 // ─── Theme ────────────────────────────────────────────────────────────────────
 
-function applyTheme(subjectKey) {
+const SUN_ICON = `<circle cx="8" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="8" y1="1" x2="8" y2="2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="13.5" x2="8" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="1" y1="8" x2="2.5" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="13.5" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="3.05" y1="3.05" x2="4.11" y2="4.11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="11.89" y1="11.89" x2="12.95" y2="12.95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="12.95" y1="3.05" x2="11.89" y2="4.11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="4.11" y1="11.89" x2="3.05" y2="12.95" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`;
+
+const MOON_ICON = `<path d="M12.5 9.5A5.5 5.5 0 0 1 6.5 3.5a5.5 5.5 0 1 0 6 6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>`;
+
+function applyColorTheme(subjectKey) {
   document.documentElement.setAttribute('data-subject', subjectKey);
   const dot = document.querySelector('.nav-brand-dot');
   if (dot) dot.style.background = SUBJECTS[subjectKey].color;
+}
+
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next   = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('mm-theme', next);
+  document.getElementById('themeIcon').innerHTML = next === 'dark' ? MOON_ICON : SUN_ICON;
+}
+
+function initTheme() {
+  const saved   = localStorage.getItem('mm-theme');
+  const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const theme   = saved || prefers;
+  document.documentElement.setAttribute('data-theme', theme);
+  const icon = document.getElementById('themeIcon');
+  if (icon) icon.innerHTML = theme === 'dark' ? MOON_ICON : SUN_ICON;
 }
 
 // ─── Random problem ───────────────────────────────────────────────────────────
@@ -184,7 +213,7 @@ function replay() {
 function buildLesson(subjectKey) {
   const { subject, lesson } = getTodayLesson(subjectKey);
 
-  applyTheme(subjectKey);
+  applyColorTheme(subjectKey);
 
   document.getElementById('heroEyebrow').textContent = subject.label;
   document.getElementById('heroConcept').textContent = lesson.concept;
@@ -221,6 +250,7 @@ function buildLesson(subjectKey) {
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 function init() {
+  initTheme();
   document.getElementById('dateChip').textContent = new Date().toLocaleDateString('en-US', {
     weekday: 'long', month: 'long', day: 'numeric'
   });
