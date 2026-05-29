@@ -481,22 +481,18 @@ const SUBJECTS = {
 
 };
 
-// ─── Daily rotation ──────────────────────────────────────────────────────────
+// ─── Subject list ─────────────────────────────────────────────────────────────
 
 const ROTATION = [
   'algebra', 'geometry', 'fractions',
   'statistics', 'percentages', 'trigonometry', 'numbertheory'
 ];
 
-function daysSinceEpoch() {
-  const epoch = new Date('2026-01-01');
-  return Math.floor((new Date() - epoch) / 86400000);
-}
-
+// Pick a random lesson on every page load.
+// If the user manually picks a subject, choose a random lesson from that subject.
 function getTodayLesson(subjectOverride) {
-  const d = daysSinceEpoch();
-  const subjectKey = subjectOverride || ROTATION[d % ROTATION.length];
+  const subjectKey = subjectOverride || ROTATION[Math.floor(Math.random() * ROTATION.length)];
   const subject    = SUBJECTS[subjectKey];
-  const lesson     = subject.lessons[Math.floor(d / ROTATION.length) % subject.lessons.length];
+  const lesson     = subject.lessons[Math.floor(Math.random() * subject.lessons.length)];
   return { subjectKey, subject, lesson };
 }

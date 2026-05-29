@@ -224,14 +224,13 @@ function buildLesson(subjectKey) {
 function init() {
   const navSubjects    = document.getElementById('navSubjects');
   const mobileSubjects = document.getElementById('mobileSubjects');
-  const d              = daysSinceEpoch();
-  const todayKey       = ROTATION[d % ROTATION.length];
 
+  // Pick a random subject for the initial load; no subject is pre-highlighted
   ROTATION.forEach(key => {
     const subj = SUBJECTS[key];
     [navSubjects, mobileSubjects].forEach(container => {
       const btn = document.createElement('button');
-      btn.className       = 'subject-pill' + (key === todayKey ? ' active' : '');
+      btn.className       = 'subject-pill';
       btn.dataset.subject = key;
       btn.innerHTML       = `<span class="pill-icon">${subj.icon}</span> ${subj.label}`;
       btn.addEventListener('click', () => switchSubject(key));
@@ -243,8 +242,14 @@ function init() {
     weekday: 'long', month: 'long', day: 'numeric'
   });
 
-  activeSubject = todayKey;
-  buildLesson(todayKey);
+  // Load a fully random lesson on every page open
+  const { subjectKey } = getTodayLesson();
+  activeSubject = subjectKey;
+  // Highlight the pill for the randomly chosen subject
+  document.querySelectorAll('.subject-pill').forEach(el => {
+    el.classList.toggle('active', el.dataset.subject === subjectKey);
+  });
+  buildLesson(subjectKey);
 }
 
 document.addEventListener('DOMContentLoaded', init);
