@@ -1,0 +1,883 @@
+{
+  "subjects": {
+    "algebra": {
+      "label": "Algebra",
+      "icon": "𝑥",
+      "color": "#0071e3",
+      "lessons": [
+        {
+          "concept": "Solving for a Mystery Number",
+          "desc": "x is just a box with a secret number inside. Your job? Rip off the layers around it until it's naked. We do that by doing the same thing to BOTH sides — like when you split a bill 50/50, both people pay the same.",
+          "problem": "Solve for x:   3x + 7 = 22",
+          "steps": [
+            { "action": "Read it out loud first", "math": "3x + 7 = 22", "eli5": "This says: 'three copies of the mystery number, plus 7, lands on 22.' Your mission: find what x is hiding. Think of it like a locked box — we need to undo everything around it." },
+            { "action": "Get rid of the +7 by subtracting 7 from both sides", "math": "3x = 22 − 7 = 15", "eli5": "The +7 is in the way, so kick it off. But here's the rule: whatever you do to one side, you MUST do to the other — like a seesaw. Remove 7 from the left, remove 7 from the right, and it stays balanced." },
+            { "action": "Divide both sides by 3", "math": "x = 15 ÷ 3 = 5", "eli5": "3x means '3 bags of x.' We want just ONE bag. So split 15 into 3 equal groups: 5, 5, 5. Each bag holds 5. x = 5! 🎉" },
+            { "action": "Plug x = 5 back in to double-check", "math": "3(5) + 7 = 15 + 7 = 22  ✓", "eli5": "Always verify — it takes 5 seconds and saves you from embarrassing mistakes. Replace x with 5: does it equal 22? Yes! You're done." }
+          ],
+          "answer": "x = 5"
+        },
+        {
+          "concept": "The Distributive Property",
+          "desc": "Imagine you're buying 4 combo meals, and each combo has a burger AND fries. You don't order 4 combos — you order 4 burgers and 4 fries separately. That's distribution: multiply the outside number by EVERYTHING inside the parentheses.",
+          "problem": "Expand and simplify:   4(2x − 3) + 6",
+          "steps": [
+            { "action": "Multiply 4 into the first thing inside", "math": "4 × 2x = 8x", "eli5": "The 4 outside is like a delivery driver who has to drop off a package at EVERY address inside the parentheses. First stop: 2x. Four deliveries of 2x = 8x." },
+            { "action": "Multiply 4 into the second thing inside", "math": "4 × (−3) = −12", "eli5": "Second stop: −3. Four deliveries of −3 = −12. Positive × negative = negative. If you owe someone $3 four times, you owe $12 total." },
+            { "action": "The +6 was outside — it just tags along", "math": "8x − 12 + 6", "eli5": "The +6 wasn't inside the parentheses, so the 4 never touched it. It shows up unchanged, like a friend who wasn't in the delivery zone." },
+            { "action": "Combine the plain numbers: −12 + 6", "math": "8x − 6", "eli5": "−12 + 6 = −6. Think: you owe $12 but someone gives you $6 back. You still owe $6. The 8x stays alone because you can't mix apples (x-terms) with dollars (plain numbers)." }
+          ],
+          "answer": "8x − 6"
+        },
+        {
+          "concept": "Factoring a Trinomial",
+          "desc": "This is reverse LEGO. Someone already snapped the pieces together — your job is to figure out which two pieces were used. We're un-multiplying instead of multiplying.",
+          "problem": "Factor:   x² + 5x + 6",
+          "steps": [
+            { "action": "Find two numbers that multiply to 6", "math": "Pairs: (1 × 6),  (2 × 3)", "eli5": "List every pair of numbers whose product is the last number (6). Like finding all the ways to arrange 6 chairs into equal rows: 1×6 or 2×3." },
+            { "action": "Which pair also adds up to 5?", "math": "1 + 6 = 7 ✗     2 + 3 = 5 ✓", "eli5": "Now check: which pair's sum matches the middle number (5)? It's like a lock that needs TWO codes at once — multiply to 6 AND add to 5. Only 2 and 3 crack it." },
+            { "action": "Build the two brackets", "math": "(x + 2)(x + 3)", "eli5": "Slot each winning number into its own bracket with an x. It's the recipe that was used to bake x² + 5x + 6." },
+            { "action": "Verify by FOILing back out", "math": "x² + 3x + 2x + 6 = x² + 5x + 6  ✓", "eli5": "FOIL = First, Outer, Inner, Last. Multiply the brackets out and make sure you get back what you started with. It's like tasting your recipe to make sure it matches the original. ✓" }
+          ],
+          "answer": "(x + 2)(x + 3)"
+        },
+        {
+          "concept": "Two Equations, One Answer",
+          "desc": "You're a detective with two clues. Clue 1 alone doesn't solve it. Clue 2 alone doesn't solve it. But shove Clue 1 INTO Clue 2 and suddenly — boom — case solved. That's substitution.",
+          "problem": "Solve:   y = 2x + 1   and   3x + y = 16",
+          "steps": [
+            { "action": "Equation 1 hands us y on a silver platter", "math": "y = 2x + 1", "eli5": "The first equation basically says 'hey, y is just 2x + 1.' That's a free gift. We're going to use it as a swap card." },
+            { "action": "Swap y into equation 2", "math": "3x + (2x + 1) = 16   →   5x + 1 = 16", "eli5": "Everywhere you see y in equation 2, replace it with (2x + 1). Now there's only ONE unknown — x. It went from impossible to totally solvable in one step!" },
+            { "action": "Solve for x", "math": "5x = 15   →   x = 3", "eli5": "Subtract 1 from both sides: 5x = 15. Divide by 5: x = 3. Found him!" },
+            { "action": "Plug x = 3 back into equation 1 to find y", "math": "y = 2(3) + 1 = 7", "eli5": "Now that x is solved, substitute it back into the easy equation: y = 2×3 + 1 = 7. Case closed: x = 3, y = 7. 🕵️" }
+          ],
+          "answer": "x = 3,  y = 7"
+        },
+        {
+          "concept": "The Quadratic Formula",
+          "desc": "When you throw a ball up in the air, it goes up AND comes back down — two events, two answers. Equations with x² can have two solutions too. The quadratic formula is the universal key that unlocks all of them.",
+          "problem": "Solve:   x² − 5x + 6 = 0",
+          "steps": [
+            { "action": "Label the ingredients: a, b, c", "math": "a = 1,  b = −5,  c = 6", "eli5": "Every quadratic looks like ax² + bx + c = 0. Match the pieces: number in front of x² → a, number in front of x → b, plain number → c. Watch out for negatives!" },
+            { "action": "Write the formula — it always works", "math": "x = (−b ± √(b²− 4ac)) / 2a", "eli5": "This formula is like a cheat code that works on EVERY quadratic. The ± means you'll run it twice — once with + and once with −. That's where the two answers come from." },
+            { "action": "Calculate what's under the square root first", "math": "(−5)² − 4(1)(6) = 25 − 24 = 1  →  √1 = 1", "eli5": "This part is called the discriminant. If it's positive → 2 answers. Zero → 1 answer. Negative → no real answers. Ours is 1, so we get 2 answers." },
+            { "action": "Compute both answers using + and −", "math": "x = (5+1)/2 = 3   or   x = (5−1)/2 = 2", "eli5": "Plug in: −b = 5, √1 = 1, 2a = 2. Answer 1: (5+1)/2 = 3. Answer 2: (5−1)/2 = 2." }
+          ],
+          "answer": "x = 2  or  x = 3"
+        },
+        {
+          "concept": "Slope — How Steep Is the Hill?",
+          "desc": "Slope tells you how steep a line is. A flat road = slope 0. A gentle hill = slope 0.5. A near-vertical cliff = slope 10. We measure it as 'how many steps up for every 1 step sideways.'",
+          "problem": "Find the slope through points (1, 3) and (4, 9)",
+          "steps": [
+            { "action": "Slope = rise ÷ run", "math": "m = (y₂ − y₁) / (x₂ − x₁)", "eli5": "Rise = how much you go up (or down). Run = how much you go sideways. Slope tells you the ratio. Hiking up a mountain: if you climb 2 meters for every 1 meter forward, slope = 2." },
+            { "action": "Label the points and plug them in", "math": "m = (9 − 3) / (4 − 1)", "eli5": "First point: (x₁, y₁) = (1, 3). Second point: (x₂, y₂) = (4, 9). Subtract in the same order for both — second minus first. Don't mix them up!" },
+            { "action": "Simplify the fraction", "math": "m = 6 / 3 = 2", "eli5": "The line rises 6 units while going 3 units to the right. 6 ÷ 3 = 2. For every step right, you go up 2 steps — like a steep staircase." },
+            { "action": "What does slope 2 actually feel like?", "math": "→ 1 step right,  ↑ 2 steps up  📈", "eli5": "Slope 2 is a solid hill. For comparison: a wheelchair ramp is about slope 0.08. A ski slope is around 0.5–1. Slope 2 would be a very aggressive staircase!" }
+          ],
+          "answer": "m = 2"
+        },
+        {
+          "concept": "Combining Like Terms",
+          "desc": "You can add apples to apples and oranges to oranges — but NOT apples to oranges. Same rule in algebra: only combine terms that have the exact same variable and power.",
+          "problem": "Simplify:   5x² + 3x − 2x² + 7 − x",
+          "steps": [
+            { "action": "Collect all the x² terms", "math": "5x² − 2x² = 3x²", "eli5": "Think of x² as a specific type of fruit — let's say mangoes. 5 mangoes minus 2 mangoes = 3 mangoes. Easy!" },
+            { "action": "Collect all the plain x terms", "math": "3x − x = 2x", "eli5": "x is a different fruit — let's say apples. 3 apples minus 1 apple = 2 apples. Note: a lone −x means −1x." },
+            { "action": "The number 7 rides solo", "math": "+ 7", "eli5": "7 is just a plain number with no fruit attached. There's no other plain number to combine it with, so it stays as-is." },
+            { "action": "Write the final answer", "math": "3x² + 2x + 7", "eli5": "Line them up in order: highest power first (x²), then x, then the plain number. This is called standard form — the polished, tidy version of your answer." }
+          ],
+          "answer": "3x² + 2x + 7"
+        },
+        {
+          "concept": "Solving Inequalities",
+          "desc": "An inequality is like an equation, but instead of '=' you have '>' or '<'. The solving steps are almost identical — with one critical twist: if you multiply or divide by a negative number, the arrow flips.",
+          "problem": "Solve:   2x − 3 < 7",
+          "steps": [
+            { "action": "Add 3 to both sides", "math": "2x < 7 + 3 = 10", "eli5": "Same moves as a regular equation. The < sign doesn't care about adding or subtracting — it stays pointing the same way. 2x < 10." },
+            { "action": "Divide both sides by 2", "math": "x < 5", "eli5": "Dividing by a POSITIVE number → the sign stays. Dividing by a NEGATIVE number → the sign FLIPS. We're dividing by +2, so < stays <. x < 5." },
+            { "action": "Read the answer as a range", "math": "x can be 4, 3, 0, −100... anything less than 5", "eli5": "Unlike an equation (one answer), an inequality gives you a whole zone of correct answers. Every number less than 5 works. 4.99999 works. 5 does NOT." },
+            { "action": "Check with a test value — try x = 4", "math": "2(4) − 3 = 5 < 7  ✓", "eli5": "Plug x = 4 into the original. 8−3 = 5. Is 5 < 7? Yes! Now try x = 6: 2(6)−3 = 9. Is 9 < 7? No! That confirms x must be less than 5." }
+          ],
+          "answer": "x < 5"
+        },
+        {
+          "concept": "Absolute Value",
+          "desc": "Absolute value measures distance from zero — and distance is always positive. Whether you're 5 steps left or 5 steps right of home, you're still 5 steps away. |−5| = 5 and |5| = 5.",
+          "problem": "Solve:   |x − 3| = 7",
+          "steps": [
+            { "action": "Absolute value = distance, so there are two cases", "math": "x − 3 = 7   OR   x − 3 = −7", "eli5": "The expression inside the bars lands on 7 OR on −7 — both are exactly 7 steps from zero. Think of it as: the answer could be 7 steps to the right OR 7 steps to the left on the number line." },
+            { "action": "Solve case 1", "math": "x − 3 = 7   →   x = 10", "eli5": "Add 3 to both sides: x = 10. This is the 'walked right' answer. Check: |10−3| = |7| = 7. ✓" },
+            { "action": "Solve case 2", "math": "x − 3 = −7   →   x = −4", "eli5": "Add 3 to both sides: x = −4. This is the 'walked left' answer. Check: |−4−3| = |−7| = 7. ✓" },
+            { "action": "Final answer: two solutions", "math": "x = 10   or   x = −4", "eli5": "Absolute value equations almost always have two answers — one positive distance, one negative. Always set up both cases, solve both, check both." }
+          ],
+          "answer": "x = 10  or  x = −4"
+        },
+        {
+          "concept": "Exponent Rules",
+          "desc": "Exponents are repeated multiplication. When you multiply or divide powers of the same base, there are shortcuts that save enormous amounts of work. These rules show up everywhere from scientific notation to compound interest.",
+          "problem": "Simplify:   x³ × x⁴ ÷ x²",
+          "steps": [
+            { "action": "Multiplying same base: ADD the exponents", "math": "x³ × x⁴ = x^(3+4) = x⁷", "eli5": "x³ = x·x·x and x⁴ = x·x·x·x. Multiply them: seven x's multiplied together = x⁷. Counting xs is faster than writing them all out — just add the powers." },
+            { "action": "Dividing same base: SUBTRACT the exponents", "math": "x⁷ ÷ x² = x^(7−2) = x⁵", "eli5": "Dividing cancels pairs. x⁷ ÷ x² crosses out 2 of the 7 x's. 7−2 = 5 x's remain. x⁵." },
+            { "action": "Double-check with numbers — try x = 2", "math": "2³ × 2⁴ ÷ 2² = 8 × 16 ÷ 4 = 128 ÷ 4 = 32 = 2⁵ ✓", "eli5": "Plug in x = 2: 8 × 16 = 128, divided by 4 = 32. And 2⁵ = 32. The rule works!" },
+            { "action": "Summary of the key rules", "math": "xᵃ × xᵇ = x^(a+b)   |   xᵃ ÷ xᵇ = x^(a−b)", "eli5": "Same base multiplying → add powers. Same base dividing → subtract powers. These two rules handle 90% of exponent simplification problems." }
+          ],
+          "answer": "x⁵"
+        }
+      ]
+    },
+    "geometry": {
+      "label": "Geometry",
+      "icon": "△",
+      "color": "#8944ab",
+      "lessons": [
+        {
+          "concept": "Area of a Triangle",
+          "desc": "Imagine a grilled cheese sandwich cut diagonally. That triangle is EXACTLY half the original rectangle. No matter what triangle you draw, you can always complete it into a rectangle — and the triangle is always half.",
+          "problem": "Find the area of a triangle with base 10 cm and height 6 cm.",
+          "diagram": "triangle",
+          "steps": [
+            { "action": "A triangle = exactly half a rectangle", "math": "A = ½ × base × height", "eli5": "Take any triangle. Duplicate it, flip the copy, and snap it to the original — you always get a parallelogram. So the triangle is always half. The ½ isn't magic, it's just geometry being honest." },
+            { "action": "Plug in base = 10, height = 6", "math": "A = ½ × 10 × 6", "eli5": "The height isn't the slanted side — it's the straight-up perpendicular distance from the base to the tip. Like measuring how tall a tent is, not how long the slanted fabric is." },
+            { "action": "Multiply it out", "math": "A = ½ × 60 = 30 cm²", "eli5": "10 × 6 = 60, then half of 60 = 30. That's 30 square centimeters — about the size of a large Post-it note." }
+          ],
+          "answer": "A = 30 cm²"
+        },
+        {
+          "concept": "The Pythagorean Theorem",
+          "desc": "This 2,500-year-old formula lets you find any missing side of a right triangle — no measuring tape needed. Builders, architects, and GPS systems use it every single day.",
+          "problem": "A right triangle has legs of 6 and 8. Find the hypotenuse.",
+          "diagram": "right-triangle",
+          "steps": [
+            { "action": "The rule: a² + b² = c²", "math": "a² + b² = c²", "eli5": "Only works for right triangles (the ones with a 90° corner). a and b are the two shorter sides (legs). c is the hypotenuse — always the longest side, always across from the 90° corner." },
+            { "action": "Square both legs and add them", "math": "6² + 8² = 36 + 64 = 100", "eli5": "6² = 36. 8² = 64. Add: 36 + 64 = 100. So c² = 100. Now we just need to find what number times itself = 100." },
+            { "action": "Take the square root", "math": "c = √100 = 10", "eli5": "√100 = 10 because 10 × 10 = 100. The hypotenuse is 10! Real-world check: if a TV is 6 inches tall and 8 inches wide, the diagonal screen size is exactly 10 inches." },
+            { "action": "This is the famous 3-4-5 family", "math": "6-8-10 is just 2 × (3-4-5)  ✓", "eli5": "Certain combos always work perfectly: (3,4,5), (5,12,13), (8,15,17). Builders memorize these to check if their corners are actually 90°." }
+          ],
+          "answer": "c = 10"
+        },
+        {
+          "concept": "Circumference of a Circle",
+          "desc": "If you cut a bicycle tire and unrolled it flat, how long would it be? That length is the circumference. It's always exactly π times the diameter — doesn't matter if it's a coin or a planet.",
+          "problem": "Find the circumference of a circle with radius 7 cm. (π ≈ 3.14)",
+          "diagram": "circle",
+          "steps": [
+            { "action": "The formula: C = 2πr", "math": "C = 2πr", "eli5": "Radius = center to edge. Diameter = all the way across = 2r. Circumference = π × diameter = 2πr. π ≈ 3.14159… one of math's most famous irrational numbers." },
+            { "action": "Plug in r = 7 and π ≈ 3.14", "math": "C = 2 × 3.14 × 7", "eli5": "We use 3.14 as a close-enough stand-in for π. NASA uses it to 15 decimal places for spacecraft navigation!" },
+            { "action": "Multiply step by step", "math": "C = 6.28 × 7 = 43.96 cm", "eli5": "2 × 3.14 = 6.28 first, then × 7 = 43.96. You'd need about 44 cm of string to wrap once around this circle." }
+          ],
+          "answer": "C ≈ 43.96 cm"
+        },
+        {
+          "concept": "Angles Inside a Polygon",
+          "desc": "Here's a cool trick: ANY polygon can be sliced into triangles from one corner. Each triangle has 180°. So just count the triangles and multiply. A hexagon hides 4 triangles inside it!",
+          "problem": "Find the sum of interior angles of a hexagon (6 sides).",
+          "diagram": "hexagon",
+          "steps": [
+            { "action": "The formula: (n − 2) × 180°", "math": "Sum = (n − 2) × 180°", "eli5": "Draw a hexagon. Pick one corner and draw lines to all the non-adjacent corners. You'll carve it into triangles. A 4-sided shape makes 2 triangles. 5-sided → 3 triangles. Always (n−2) triangles." },
+            { "action": "Hexagon has 6 sides, so n = 6", "math": "Sum = (6 − 2) × 180°", "eli5": "Plug in: 6 − 2 = 4. Four triangles hiding inside every hexagon! Honeycombs are hexagonal because this makes them incredibly strong and space-efficient." },
+            { "action": "Calculate", "math": "Sum = 4 × 180° = 720°", "eli5": "4 × 180 = 720°. Divided by 6 corners = 120° per corner. That's why honeycomb tiles fit together perfectly — 3 corners meeting at a point = 3 × 120° = 360°. Nature's a math genius!" }
+          ],
+          "answer": "Sum = 720°"
+        },
+        {
+          "concept": "Area of a Circle",
+          "desc": "π sneaks in again! The area formula πr² is one of the most famous in all of math. It tells you how much 'floor space' is inside a circle — like figuring out how many tiles you need for a circular pizza oven.",
+          "problem": "Find the area of a circle with radius 5 m. (π ≈ 3.14)",
+          "diagram": "circle",
+          "steps": [
+            { "action": "The formula: A = πr²", "math": "A = πr²", "eli5": "r² means radius × radius. Then multiply by π. A square with side r has area r². A circle with the same radius has area πr² ≈ 3.14r² — the circle is a bit more than 3 times that square." },
+            { "action": "Square the radius first (exponent before multiply!)", "math": "5² = 25", "eli5": "Order of operations: deal with the exponent before multiplying by π. 5² = 5 × 5 = 25. Imagine a 5×5 square of floor tiles." },
+            { "action": "Multiply by π", "math": "A = 3.14 × 25 = 78.5 m²", "eli5": "3.14 × 25: do 3 × 25 = 75, then 0.14 × 25 = 3.5, add them: 78.5 m². Roughly the floor area of a small bedroom!" }
+          ],
+          "answer": "A ≈ 78.5 m²"
+        },
+        {
+          "concept": "Perimeter — The Fencing Problem",
+          "desc": "Perimeter is how far you'd walk if you traced the exact outline of a shape without lifting your feet. Want to fence your yard? Rope off a running track? That's perimeter math.",
+          "problem": "Find the perimeter of a rectangle 9 cm long and 4 cm wide.",
+          "diagram": "rectangle",
+          "steps": [
+            { "action": "A rectangle has two pairs of equal sides", "math": "P = 2 × length + 2 × width", "eli5": "Opposite sides of a rectangle are always equal. Instead of adding all 4 sides separately (9+4+9+4), just double each unique measurement." },
+            { "action": "Plug in 9 cm and 4 cm", "math": "P = 2(9) + 2(4) = 18 + 8", "eli5": "Two long sides: 2 × 9 = 18 cm. Two short sides: 2 × 4 = 8 cm." },
+            { "action": "Add them up", "math": "P = 26 cm", "eli5": "18 + 8 = 26 cm total. Perimeter is always a distance (cm, m, feet — never cm²)." }
+          ],
+          "answer": "P = 26 cm"
+        },
+        {
+          "concept": "Supplementary Angles",
+          "desc": "Two angles are supplementary when they sit side-by-side and together make a perfectly flat straight line. A straight line = 180°. Knowing one angle immediately tells you its partner.",
+          "problem": "Angle A and Angle B make a straight line. Angle A = 65°. Find Angle B.",
+          "steps": [
+            { "action": "A straight line always = 180°", "math": "A + B = 180°", "eli5": "A full rotation is 360°. A straight line is half of that: 180°. When two angles sit on a straight line, they have to share those 180° between them." },
+            { "action": "Plug in A = 65°", "math": "65° + B = 180°", "eli5": "We know one angle grabbed 65° of the 180°. The other angle gets whatever is left. Like splitting a $180 bill when your friend already paid $65." },
+            { "action": "Subtract to find B", "math": "B = 180° − 65° = 115°", "eli5": "180 − 65 = 115. Angle B = 115°. Quick check: 65 + 115 = 180. ✓" }
+          ],
+          "answer": "Angle B = 115°"
+        },
+        {
+          "concept": "Volume of a Rectangular Box",
+          "desc": "Volume measures how much 3D space a solid object takes up — like how many sugar cubes would fill a shoebox. Length × width gives you the floor. Multiply by height to stack the floors up.",
+          "problem": "Find the volume of a box that is 5 cm long, 3 cm wide, and 4 cm tall.",
+          "steps": [
+            { "action": "Formula: V = length × width × height", "math": "V = l × w × h", "eli5": "Think of the base layer of cubes: 5 × 3 = 15 cubes on the floor. Now stack 4 layers high. 15 × 4 = 60 cubes total. That's the volume!" },
+            { "action": "Plug in the values", "math": "V = 5 × 3 × 4", "eli5": "5 cm long, 3 cm wide, 4 cm tall. Multiply in any order — multiplication is commutative. Let's do 5 × 3 first." },
+            { "action": "Calculate step by step", "math": "5 × 3 = 15,   then 15 × 4 = 60", "eli5": "15 × 4 = 60. The box holds 60 cubic centimeters — written as 60 cm³. Volume always uses cubic units!" },
+            { "action": "Units matter: length³ for volume", "math": "V = 60 cm³", "eli5": "Area was cm². Volume is cm³ — three dimensions. If the sides were in meters, the answer would be m³. Always cube the unit, not just the number." }
+          ],
+          "answer": "V = 60 cm³"
+        },
+        {
+          "concept": "Complementary Angles",
+          "desc": "Two angles are complementary when they fit together perfectly to form a 90° right angle — like two puzzle pieces that create a perfect corner. A 30° slice and a 60° slice fit together to make a right angle.",
+          "problem": "Two angles are complementary. One is 34°. Find the other.",
+          "steps": [
+            { "action": "Complementary angles always sum to 90°", "math": "A + B = 90°", "eli5": "A right angle (the little square symbol you see in triangles) is exactly 90°. When two angles together make a right angle, they're complementary. They're each other's 'right-angle partner.'" },
+            { "action": "Plug in the known angle", "math": "34° + B = 90°", "eli5": "One angle took up 34° of the 90°. The other gets the rest. How much is left after 34°?" },
+            { "action": "Subtract", "math": "B = 90° − 34° = 56°", "eli5": "90 − 34 = 56. The other angle is 56°. Check: 34 + 56 = 90. ✓ A 34° angle and a 56° angle fit together to make a perfect right angle." }
+          ],
+          "answer": "56°"
+        },
+        {
+          "concept": "Surface Area of a Cube",
+          "desc": "Surface area is the total area of the outside skin of a 3D shape — like measuring how much wrapping paper you need for a gift. A cube has 6 identical square faces. Find one face's area, multiply by 6.",
+          "problem": "Find the surface area of a cube with side length 4 cm.",
+          "steps": [
+            { "action": "A cube has 6 square faces, all identical", "math": "SA = 6 × (side²)", "eli5": "Picture a dice. It has 6 faces. Every face is a perfect square. And every face is exactly the same size. So: find the area of one face, then multiply by 6." },
+            { "action": "Find one face's area", "math": "4 × 4 = 16 cm²", "eli5": "One face is a 4×4 square. Area = 4² = 16 cm². That's the amount of wrapping paper you'd need for just one face of the box." },
+            { "action": "Multiply by 6 faces", "math": "SA = 6 × 16 = 96 cm²", "eli5": "6 faces × 16 cm² each = 96 cm². That's your total surface area — the amount of paint you'd need to coat the whole cube, or the wrapping paper to cover it completely." }
+          ],
+          "answer": "SA = 96 cm²"
+        }
+      ]
+    },
+    "fractions": {
+      "label": "Fractions",
+      "icon": "½",
+      "color": "#d63060",
+      "lessons": [
+        {
+          "concept": "Simplifying Fractions",
+          "desc": "12/18 and 2/3 are the exact same amount — just written differently. It's like saying 'twelve out of eighteen slices' vs 'two out of three slices' — same fraction of the pizza. Simplifying just finds the simplest way to say it.",
+          "problem": "Simplify the fraction:   12/18",
+          "steps": [
+            { "action": "Find a number that divides evenly into BOTH top and bottom", "math": "Both 12 and 18 are divisible by 6", "eli5": "We want the biggest number that fits into both without a remainder. Test 6: 12 ÷ 6 = 2 ✓, 18 ÷ 6 = 3 ✓. This is called the Greatest Common Factor (GCF)." },
+            { "action": "Divide the top by 6", "math": "12 ÷ 6 = 2", "eli5": "The numerator goes from 12 to 2. You're not changing the fraction's value — you're just shrinking the numbers while keeping the ratio the same. Like resizing a photo." },
+            { "action": "Divide the bottom by 6", "math": "18 ÷ 6 = 3", "eli5": "The denominator goes from 18 to 3. Both went down by the same factor, so the fraction is still worth the same. 12/18 = 2/3." },
+            { "action": "Can 2/3 simplify further?", "math": "2 and 3 share no common factor → fully simplified!", "eli5": "2 is prime. 3 is prime. They don't share any factor except 1. 2/3 is the simplest, cleanest way to write this fraction. Done! ✅" }
+          ],
+          "answer": "2/3"
+        },
+        {
+          "concept": "Adding Fractions (Same Denominator)",
+          "desc": "Adding fractions is like adding slices of pizza — but only if they're the same size. When the slices are the same size (same denominator), just count them!",
+          "problem": "Add:   1/4 + 2/4",
+          "steps": [
+            { "action": "Check: same denominator?", "math": "Both have 4 — same-sized slices!  ✓", "eli5": "The denominator (bottom number) tells you the slice size. Both say '4,' meaning both pizzas were cut into 4 equal pieces." },
+            { "action": "Add the tops, keep the bottom", "math": "1 + 2 = 3,  keep the 4", "eli5": "1 slice + 2 slices = 3 slices. The slice size (4) doesn't change just because you combined them. It's like saying: 1 quarter + 2 quarters = 3 quarters." },
+            { "action": "Write the result", "math": "3/4", "eli5": "You now have 3 out of 4 pieces. Three quarters of a pizza! 🍕" },
+            { "action": "Can it simplify? Check 3 and 4", "math": "3 and 4 share no common factor → 3/4 is fully simplified ✓", "eli5": "3 is prime. 4 = 2². No shared factors. 3/4 is already as simple as it gets." }
+          ],
+          "answer": "3/4"
+        },
+        {
+          "concept": "Adding Unlike Fractions",
+          "desc": "Imagine trying to add a slice from a pizza cut into 3 pieces and a slice from a pizza cut into 4 pieces. You can't just say '2 slices' — the slices are different sizes! You have to re-cut everything to the same size first.",
+          "problem": "Add:   1/3 + 1/4",
+          "steps": [
+            { "action": "Find a common denominator", "math": "3 × 4 = 12  →  convert everything to 12ths", "eli5": "We need a size both 3 and 4 can divide into. Easiest trick: multiply the two denominators. Now re-cut both pizzas into 12 equal pieces." },
+            { "action": "Convert 1/3 into twelfths", "math": "1/3 = 4/12   (× top and bottom by 4)", "eli5": "To go from 3 slices to 12, multiply by 4. Do the same to the top: 1 × 4 = 4. So 1/3 = 4/12." },
+            { "action": "Convert 1/4 into twelfths", "math": "1/4 = 3/12   (× top and bottom by 3)", "eli5": "To go from 4 to 12, multiply by 3. Top: 1 × 3 = 3. So 1/4 = 3/12. Now both fractions have the same denominator!" },
+            { "action": "Add the tops — now they match!", "math": "4/12 + 3/12 = 7/12", "eli5": "4 twelfths + 3 twelfths = 7 twelfths. 7 and 12 share no common factor, so 7/12 is our final answer. 🍕" }
+          ],
+          "answer": "7/12"
+        },
+        {
+          "concept": "Multiplying Fractions",
+          "desc": "Multiplying fractions means 'a fraction OF another fraction.' Half of a pizza, then you eat half of THAT — you get a quarter. 1/2 × 1/2 = 1/4. No messy denominator matching needed!",
+          "problem": "Multiply:   2/3 × 3/5",
+          "steps": [
+            { "action": "Multiply the tops together", "math": "2 × 3 = 6", "eli5": "Top × top. That's it! No finding common denominators — that's only for adding and subtracting. Multiplication is way simpler." },
+            { "action": "Multiply the bottoms together", "math": "3 × 5 = 15", "eli5": "Bottom × bottom. The denominator grows to reflect that you're taking smaller and smaller pieces." },
+            { "action": "You now have 6/15 — but can it simplify?", "math": "6/15 — both divisible by 3", "eli5": "6 ÷ 3 = 2. 15 ÷ 3 = 5. Simplify whenever you can — it keeps answers clean. 6/15 = 2/5." },
+            { "action": "Final answer", "math": "2/5", "eli5": "Two-thirds of three-fifths = two-fifths. You took a portion of a portion, so the result is smaller than either original!" }
+          ],
+          "answer": "2/5"
+        },
+        {
+          "concept": "Dividing Fractions",
+          "desc": "Dividing by a fraction sounds scary but there's a slick trick: KEEP the first fraction, CHANGE ÷ to ×, FLIP the second fraction. Then just multiply. Sounds weird, works perfectly, every time.",
+          "problem": "Divide:   3/4 ÷ 1/2",
+          "steps": [
+            { "action": "KEEP: leave the first fraction alone", "math": "3/4  ←  don't touch this", "eli5": "The question is: how many halves fit inside three-quarters? Keep the 3/4." },
+            { "action": "CHANGE: flip ÷ to ×", "math": "3/4  ×  ...", "eli5": "Swap the division sign for multiplication. Dividing by something is the same as multiplying by its 'opposite.'" },
+            { "action": "FLIP: flip the second fraction", "math": "1/2  →  2/1", "eli5": "Swap the top and bottom of the second fraction. 1/2 becomes 2/1. This is called the reciprocal." },
+            { "action": "Multiply and simplify", "math": "(3×2)/(4×1) = 6/4 = 3/2 = 1½", "eli5": "6/4 simplifies to 3/2 = 1½. So 1.5 half-packs fit into three-quarters. Keep-Change-Flip — never forget it! 🧁" }
+          ],
+          "answer": "3/2  (or 1½)"
+        },
+        {
+          "concept": "Mixed Numbers to Improper Fractions",
+          "desc": "A mixed number like 2½ mixes a whole number with a fraction. An improper fraction like 5/2 puts everything over one denominator. Improper fractions are easier to multiply and divide with — so we convert before calculating.",
+          "problem": "Convert 3¾ to an improper fraction.",
+          "steps": [
+            { "action": "Multiply the whole number by the denominator", "math": "3 × 4 = 12", "eli5": "The whole number part (3) represents 3 complete pizzas. Each pizza has 4 slices (denominator = 4). So 3 whole pizzas = 12 slices total." },
+            { "action": "Add the numerator", "math": "12 + 3 = 15", "eli5": "We already have 12 slices from the whole pizzas, plus 3 more from the ¾ part. Total slices: 15." },
+            { "action": "Put the result over the original denominator", "math": "15/4", "eli5": "All 15 slices are still the same size (cut into 4ths). So 3¾ = 15/4. You can verify: 15 ÷ 4 = 3 remainder 3 = 3¾. ✓" },
+            { "action": "The shortcut formula", "math": "(whole × denominator + numerator) / denominator", "eli5": "Every mixed number converts the same way: (whole × bottom + top) / bottom. Memorize this and you'll never be stuck." }
+          ],
+          "answer": "15/4"
+        },
+        {
+          "concept": "Comparing Fractions",
+          "desc": "Which is more — 3/4 of a pizza or 5/7 of a pizza? You can't tell just by looking at the numbers. The trick is giving them the same-sized slices (common denominator), then comparing the counts.",
+          "problem": "Which is larger:   3/4  or  5/7?",
+          "steps": [
+            { "action": "Find a common denominator", "math": "4 × 7 = 28", "eli5": "We need a slice size that both 4 and 7 fit into. 4 × 7 = 28. Now we re-cut both fractions into 28ths so we can compare apples to apples." },
+            { "action": "Convert 3/4 to 28ths", "math": "3/4 = 21/28   (× both by 7)", "eli5": "4 → 28 means multiply by 7. Do the same to the top: 3 × 7 = 21. So 3/4 = 21/28." },
+            { "action": "Convert 5/7 to 28ths", "math": "5/7 = 20/28   (× both by 4)", "eli5": "7 → 28 means multiply by 4. Top: 5 × 4 = 20. So 5/7 = 20/28." },
+            { "action": "Compare the numerators", "math": "21/28 > 20/28,  so 3/4 > 5/7", "eli5": "21 slices vs 20 slices — same size slices, so more slices = more pizza. 3/4 wins by a thin margin! 🍕 This surprised you, right?" }
+          ],
+          "answer": "3/4 > 5/7"
+        },
+        {
+          "concept": "Subtracting Fractions",
+          "desc": "Subtracting fractions works exactly like adding them — you still need the same denominator before you can do anything. Get the common denominator, convert both fractions, then subtract the tops.",
+          "problem": "Subtract:   5/6 − 1/4",
+          "steps": [
+            { "action": "Find the least common denominator", "math": "LCM of 6 and 4 = 12", "eli5": "Multiples of 6: 6, 12, 18... Multiples of 4: 4, 8, 12... First overlap = 12. Using 12 keeps numbers smaller than using 6×4=24." },
+            { "action": "Convert 5/6 to 12ths", "math": "5/6 = 10/12   (× both by 2)", "eli5": "6 → 12: multiply by 2. Top: 5 × 2 = 10. So 5/6 = 10/12." },
+            { "action": "Convert 1/4 to 12ths", "math": "1/4 = 3/12   (× both by 3)", "eli5": "4 → 12: multiply by 3. Top: 1 × 3 = 3. So 1/4 = 3/12. Both fractions now speak the same language!" },
+            { "action": "Subtract the tops, keep the denominator", "math": "10/12 − 3/12 = 7/12", "eli5": "10 twelfths minus 3 twelfths = 7 twelfths. Does 7/12 simplify? 7 is prime and doesn't divide 12. Final answer: 7/12. ✅" }
+          ],
+          "answer": "7/12"
+        },
+        {
+          "concept": "Fractions as Division",
+          "desc": "Here's a secret most people don't know: 3/4 literally MEANS 3 ÷ 4. The fraction bar IS a division sign. This is why fractions and division are interchangeable, and why fractions can represent numbers smaller than 1.",
+          "problem": "3 friends share 2 pizzas equally. How much does each person get?",
+          "steps": [
+            { "action": "Set up as division", "math": "2 ÷ 3", "eli5": "2 pizzas split among 3 people. Division! But 2 ÷ 3 doesn't give a whole number — each person gets less than 1 pizza. That's where fractions save us." },
+            { "action": "Write it as a fraction", "math": "2 ÷ 3 = 2/3", "eli5": "The number being divided goes on top. The number dividing goes on bottom. 2 ÷ 3 = 2/3. Each person gets two-thirds of a pizza." },
+            { "action": "Verify with a diagram", "math": "Pizza 1: cut into thirds → 1/3 each.  Pizza 2: cut into thirds → 1/3 each.", "eli5": "Cut both pizzas into 3 equal slices. Each person gets one slice from each pizza: 1/3 + 1/3 = 2/3. Exactly right!" },
+            { "action": "The key insight", "math": "a/b always means a ÷ b", "eli5": "Every fraction is secretly a division problem. 1/2 = 1÷2 = 0.5. 3/4 = 3÷4 = 0.75. This is why you can always convert fractions to decimals by dividing!" }
+          ],
+          "answer": "2/3 of a pizza each"
+        },
+        {
+          "concept": "Finding a Fraction of a Quantity",
+          "desc": "'Two-thirds of 24' sounds abstract — but it just means: divide into 3 equal groups, then take 2 of them. Finding a fraction of a quantity is a core real-world skill: sales, recipes, splitting costs.",
+          "problem": "Find 3/5 of 40.",
+          "steps": [
+            { "action": "Divide by the denominator first", "math": "40 ÷ 5 = 8", "eli5": "The denominator (5) tells you how many equal groups to split 40 into. 40 ÷ 5 = 8. So each fifth of 40 is worth 8." },
+            { "action": "Multiply by the numerator", "math": "8 × 3 = 24", "eli5": "The numerator (3) tells you how many of those groups to take. Take 3 groups of 8: 8 + 8 + 8 = 24." },
+            { "action": "Same as multiplying: 3/5 × 40", "math": "3/5 × 40 = (3 × 40)/5 = 120/5 = 24", "eli5": "Both methods give 24. The 'divide then multiply' method is often easier in your head. The fraction multiplication method is more reliable for weird numbers." },
+            { "action": "Real world check", "math": "3/5 of a $40 budget = $24 spent, $16 left", "eli5": "$40 in 5 equal parts = $8 each. Spend 3 parts = $24. Keep 2 parts = $16. Always makes sense to sanity-check with a story!" }
+          ],
+          "answer": "24"
+        }
+      ]
+    },
+    "statistics": {
+      "label": "Statistics",
+      "icon": "σ",
+      "color": "#0c8fa8",
+      "lessons": [
+        {
+          "concept": "Mean — The Fair Share",
+          "desc": "Five friends pooled their money: $4, $8, $6, $5, $7. If they split it evenly, how much does each get? That equal share is the mean. It's math's idea of fairness.",
+          "problem": "Find the mean of: 4, 8, 6, 5, 7",
+          "steps": [
+            { "action": "Dump everything into one pile", "math": "4 + 8 + 6 + 5 + 7 = 30", "eli5": "Imagine sweeping all the money into one stack. 4+8=12, +6=18, +5=23, +7=30. Total pile: $30." },
+            { "action": "Count how many people (numbers)", "math": "5 numbers", "eli5": "Five friends. Five values. Counting correctly matters — one wrong count ruins your average." },
+            { "action": "Split the pile equally", "math": "30 ÷ 5 = 6", "eli5": "$30 split among 5 friends = $6 each. The mean (6) doesn't have to be one of the original numbers — it's the hypothetical 'if everyone had the same.'" }
+          ],
+          "answer": "Mean = 6"
+        },
+        {
+          "concept": "Median — The Middle Child",
+          "desc": "Line up 5 people by height. The one standing in the middle is the median. Unlike the mean, one giant outlier doesn't throw it off.",
+          "problem": "Find the median of: 3, 7, 1, 9, 4",
+          "steps": [
+            { "action": "Sort from smallest to biggest — mandatory!", "math": "1, 3, 4, 7, 9", "eli5": "You can't find the middle without lining everyone up first. Unsorted, '3' happens to be second — but it's NOT the middle. Sort first, always." },
+            { "action": "Find the true middle position", "math": "5 values → middle is position 3", "eli5": "With 5 values, position 3 is the center (2 values on each side). Formula: (n+1)/2 = (5+1)/2 = 3." },
+            { "action": "Read off that value", "math": "1, 3,  [4],  7, 9   →   Median = 4", "eli5": "The 3rd value in the sorted list is 4. Even if the last value were 9,000,000 instead of 9, the median would still be 4. That's its superpower — it ignores crazy outliers." }
+          ],
+          "answer": "Median = 4"
+        },
+        {
+          "concept": "Mode — The Fan Favorite",
+          "desc": "If your data were a popularity contest, the mode wins. It's the number that appears the most. You can have 0, 1, or multiple modes.",
+          "problem": "Find the mode of: 2, 5, 3, 2, 8, 5, 2, 1",
+          "steps": [
+            { "action": "Tally up how many times each value appears", "math": "2 → 3×,   5 → 2×,   3 → 1×,   8 → 1×,   1 → 1×", "eli5": "Go through the list like you're counting votes. Every time a number shows up, it gets a tally mark. 2 gets the most votes!" },
+            { "action": "The most frequent value wins", "math": "2 appears 3 times — no one else comes close", "eli5": "2 is the mode! If 5 also appeared 3 times, we'd have two modes (bimodal). If everything appeared once, there'd be no mode." }
+          ],
+          "answer": "Mode = 2"
+        },
+        {
+          "concept": "Range — How Wild Is the Data?",
+          "desc": "Range captures the spread of your data — the higher it is, the more wildly different your data points are.",
+          "problem": "Find the range of test scores: 72, 85, 90, 61, 88",
+          "steps": [
+            { "action": "Spot the highest score", "math": "Maximum = 90", "eli5": "Scan for the biggest number. 90 beats 72, 85, 61, and 88. Max = 90." },
+            { "action": "Spot the lowest score", "math": "Minimum = 61", "eli5": "Scan for the smallest. 61 is the weakest score in the group. Min = 61." },
+            { "action": "Subtract: high minus low", "math": "Range = 90 − 61 = 29", "eli5": "Range = 29 points. The best student outscored the worst by 29 points. A range of 5 would mean everyone scored very similarly. Range of 29 means big differences!" }
+          ],
+          "answer": "Range = 29"
+        },
+        {
+          "concept": "Probability — What Are the Odds?",
+          "desc": "Probability = favorable outcomes ÷ total outcomes. From 0 (impossible) to 1 (guaranteed). A coin flip is 0.5.",
+          "problem": "A bag has 3 red, 2 blue, 5 green marbles. Probability of pulling red?",
+          "steps": [
+            { "action": "Count the winning outcomes (red marbles)", "math": "3 red marbles", "eli5": "There are 3 red marbles. These are the outcomes we WANT — the 'favorable' ones." },
+            { "action": "Count EVERY possible outcome", "math": "3 + 2 + 5 = 10 total marbles", "eli5": "Ten marbles total. Each one has an equal shot of being grabbed. Total possibilities = 10." },
+            { "action": "Divide: winners ÷ total", "math": "P(red) = 3/10 = 0.3", "eli5": "3 winners out of 10 possibilities = 3/10 = 0.3. Reach in 10 times (replacing each time), expect red about 3 times." },
+            { "action": "Convert to a percentage", "math": "0.3 × 100 = 30%", "eli5": "30% chance of red. 50% = coin flip, 1% = lottery ticket (much worse). 30% means it'll happen roughly once every 3 tries." }
+          ],
+          "answer": "P = 3/10  (30%)"
+        },
+        {
+          "concept": "Reading a Bar Chart",
+          "desc": "Bar charts are one of the most common ways data is shown in the real world — news articles, annual reports, science papers. Being able to read them accurately is a genuine superpower.",
+          "problem": "A bar chart shows monthly sales: Jan=120, Feb=95, Mar=140, Apr=110. What's the mean monthly sales?",
+          "steps": [
+            { "action": "Read off all the values", "math": "120, 95, 140, 110", "eli5": "Each bar's height tells you the value for that category. Read carefully — bar charts can have tricky scales (y-axis not starting at zero, for example)." },
+            { "action": "Sum all values", "math": "120 + 95 + 140 + 110 = 465", "eli5": "120 + 95 = 215. 215 + 140 = 355. 355 + 110 = 465. Total sales across all 4 months = 465 units." },
+            { "action": "Divide by the number of months", "math": "465 ÷ 4 = 116.25", "eli5": "4 months of data. 465 ÷ 4 = 116.25. On average, 116.25 units sold per month." },
+            { "action": "Identify the highest and lowest months", "math": "Highest: March (140).  Lowest: February (95)", "eli5": "Scanning for peaks and troughs is always a good habit with charts. March is the best month, February is the slowest. That's useful business insight!" }
+          ],
+          "answer": "Mean = 116.25 units/month"
+        },
+        {
+          "concept": "Median with Even Numbers",
+          "desc": "Finding the median is easy when there's an odd count — just grab the middle. But with an even count, there IS no single middle value. The trick: average the two middle values.",
+          "problem": "Find the median of: 8, 3, 7, 1, 5, 4",
+          "steps": [
+            { "action": "Sort the data", "math": "1, 3, 4, 5, 7, 8", "eli5": "Always sort first. Unsorted data makes it impossible to find the true middle." },
+            { "action": "6 values — no single middle. Find the two middle values", "math": "Positions 3 and 4: values are 4 and 5", "eli5": "With 6 values, the middle falls between positions 3 and 4. Position 3 = 4, position 4 = 5. We need to split the difference." },
+            { "action": "Average the two middle values", "math": "(4 + 5) / 2 = 9 / 2 = 4.5", "eli5": "Add them and divide by 2: (4+5)/2 = 4.5. The median is 4.5 — which is NOT one of the original data points. That's totally fine!" },
+            { "action": "Sanity check: 3 values below, 3 values above", "math": "{1, 3, 4}  |  4.5  |  {5, 7, 8}", "eli5": "The median splits the sorted data in half: 3 values on each side. 4.5 sits right in the middle — it's doing its job perfectly." }
+          ],
+          "answer": "Median = 4.5"
+        },
+        {
+          "concept": "Simple Probability: Coin Flips",
+          "desc": "A fair coin has two equally likely outcomes: heads or tails. Probability tells us how likely each outcome is as a fraction, decimal, or percentage. Fair doesn't mean it always alternates — just that each flip is independent.",
+          "problem": "What is the probability of flipping heads twice in a row?",
+          "steps": [
+            { "action": "Probability of heads on flip 1", "math": "P(heads) = 1/2", "eli5": "One favorable outcome (heads) out of 2 total outcomes (heads or tails). P = 1/2 = 50%. Both are equally likely." },
+            { "action": "Probability of heads on flip 2", "math": "P(heads) = 1/2", "eli5": "The coin has no memory. It doesn't know what it landed last time. Every flip is fresh: 1/2 chance of heads, always." },
+            { "action": "Multiply probabilities for independent events", "math": "P(HH) = 1/2 × 1/2 = 1/4", "eli5": "When two events are independent (one doesn't affect the other), multiply their probabilities. 1/2 × 1/2 = 1/4 = 25%." },
+            { "action": "Visualize all possible outcomes", "math": "HH, HT, TH, TT — 4 outcomes, only 1 is HH", "eli5": "List every outcome: HH, HT, TH, TT. That's 4 equally likely outcomes. HH is just 1 of them. P = 1/4. The multiplication shortcut gives the same answer — confirmed! ✓" }
+          ],
+          "answer": "P = 1/4  (25%)"
+        },
+        {
+          "concept": "Understanding Averages — Mean vs Median",
+          "desc": "The mean and median both try to describe the 'center' of data — but they tell very different stories. Knowing which to use (and when one lies to you) is a critical thinking skill.",
+          "problem": "Salaries: $30k, $32k, $31k, $29k, $200k. Which is more representative?",
+          "steps": [
+            { "action": "Calculate the mean", "math": "(30 + 32 + 31 + 29 + 200) / 5 = 322 / 5 = $64.4k", "eli5": "Add all five: 30+32+31+29+200 = 322. Divide by 5 = 64.4. The mean salary is $64,400. But does that represent most workers here?" },
+            { "action": "Sort and find the median", "math": "29, 30, 31, 32, 200  →  Median = $31k", "eli5": "Sorted, the middle value is $31,000. Most of these workers earn around $30–32k. The median tells a very different story than the mean." },
+            { "action": "Identify the outlier", "math": "$200k is an outlier — it drags the mean up dramatically", "eli5": "The $200k salary is an outlier — it's way outside the others. The mean got pulled all the way to $64k, which doesn't represent anyone in this group! That's called 'skewed data.'" },
+            { "action": "Choose the right measure", "math": "Median ($31k) is more representative here", "eli5": "Use median when you have outliers or skewed data. Use mean when data is evenly spread. This is why you should be skeptical when someone says 'average salary' — ask which kind of average!" }
+          ],
+          "answer": "Median ($31k) is more representative"
+        },
+        {
+          "concept": "Counting Outcomes — The Fundamental Principle",
+          "desc": "If you have 3 shirts and 4 pants, how many outfits can you make? Instead of drawing every combination, there's a fast rule: multiply the number of choices at each step.",
+          "problem": "A menu has 3 starters, 4 mains, and 2 desserts. How many 3-course meals are possible?",
+          "steps": [
+            { "action": "Count the choices at each step", "math": "Starters: 3,  Mains: 4,  Desserts: 2", "eli5": "Three separate, independent decisions. For each starter choice, you have 4 main choices. For each of those, 2 dessert choices. The options multiply." },
+            { "action": "Apply the Fundamental Counting Principle", "math": "Total = 3 × 4 × 2", "eli5": "Multiply the number of options at each decision point. This works whenever choices are independent — one choice doesn't affect another." },
+            { "action": "Calculate", "math": "3 × 4 = 12,  then 12 × 2 = 24", "eli5": "24 different 3-course meals. If you ate at this restaurant every day and always chose differently, you'd go 24 days before repeating!" },
+            { "action": "Why does multiplying work?", "math": "3 starters × 4 mains = 12 starter-main combos,  each paired with 2 desserts = 24", "eli5": "Each of the 12 starter-main combos branches into 2 dessert choices. A tree diagram would show exactly 24 endpoints. The multiply rule is just a shortcut for counting tree branches." }
+          ],
+          "answer": "24 possible meals"
+        }
+      ]
+    },
+    "percentages": {
+      "label": "Percentages",
+      "icon": "%",
+      "color": "#c77b00",
+      "lessons": [
+        {
+          "concept": "What Is a Percent?",
+          "desc": "Percent literally means 'per hundred' — like cents in a dollar. 25% means 25 out of every 100. Simple as that.",
+          "problem": "What is 25% of 80?",
+          "steps": [
+            { "action": "Convert percent → decimal", "math": "25% = 25 ÷ 100 = 0.25", "eli5": "Percent always means ÷100. Move the decimal 2 spots left: 25% → 0.25. Helpful patterns: 50% = 0.5, 10% = 0.1, 1% = 0.01." },
+            { "action": "'Of' means multiply", "math": "0.25 × 80", "eli5": "In math, 'of' = ×. So '25% of 80' = 0.25 × 80. Think of 0.25 as one quarter. One quarter of 80 is..." },
+            { "action": "Calculate", "math": "0.25 × 80 = 20", "eli5": "80 ÷ 4 = 20. A 25% discount on an $80 jacket saves you $20." }
+          ],
+          "answer": "20"
+        },
+        {
+          "concept": "Percent Increase",
+          "desc": "How much did something grow percentage-wise? We always compare the change to the ORIGINAL — not the new value.",
+          "problem": "A shirt costs $40. It goes up to $50. What's the percent increase?",
+          "steps": [
+            { "action": "Find the actual change", "math": "$50 − $40 = $10", "eli5": "How much did it change in dollars? $50 − $40 = $10." },
+            { "action": "Divide the change by the ORIGINAL price", "math": "$10 ÷ $40 = 0.25", "eli5": "Divide by the ORIGINAL (before). This is the step people always mess up — dividing by the new price gives a wrong answer." },
+            { "action": "Multiply by 100 to get a percent", "math": "0.25 × 100 = 25%", "eli5": "The shirt went up 25%. If you earned $40,000 and got a 25% raise, you'd earn $10,000 more — same math!" }
+          ],
+          "answer": "25% increase"
+        },
+        {
+          "concept": "Finding the Original Price",
+          "desc": "The jacket's already on sale — but what did it USED to cost? We know the sale price and the discount percentage. Time to work backwards.",
+          "problem": "A jacket is $60 after a 25% discount. What was the original price?",
+          "steps": [
+            { "action": "If 25% is off, 75% remains", "math": "100% − 25% = 75%", "eli5": "You removed 25% of the price. 75% of the original price is still there. The $60 you're paying IS that 75%." },
+            { "action": "Set up the equation", "math": "0.75 × original = $60", "eli5": "75% as a decimal = 0.75. So: 0.75 × original = $60." },
+            { "action": "Divide to find the original", "math": "original = $60 ÷ 0.75 = $80", "eli5": "$60 ÷ 0.75 = $80. Verify: 25% of $80 = $20 off. $80 − $20 = $60. ✓" }
+          ],
+          "answer": "$80"
+        },
+        {
+          "concept": "Tip Math",
+          "desc": "You just had a great meal. The bill is $35. Your server was awesome — leave 20%. How do you calculate it fast without a calculator? Move the decimal, double it.",
+          "problem": "Calculate a 20% tip on a $35 bill.",
+          "steps": [
+            { "action": "Find 10% first — shift the decimal left", "math": "$35 → $3.50", "eli5": "10% of anything = divide by 10. Just move the decimal one place left. $35.00 → $3.50. Instant, no calculator." },
+            { "action": "Double it to get 20%", "math": "$3.50 × 2 = $7.00", "eli5": "20% = 2 × 10%. Double the 10% answer. Bonus: 15% tip = 10% + half of 10% = $3.50 + $1.75 = $5.25." },
+            { "action": "Add tip to the bill", "math": "$35 + $7 = $42 total", "eli5": "Tip = $7. Total = $42. You calculated that in your head, at the table. 💪" }
+          ],
+          "answer": "$7 tip  →  $42 total"
+        },
+        {
+          "concept": "Sales Tax",
+          "desc": "Sales tax is a percentage added ON TOP of the price. You see the sticker price, but pay more at the register. Knowing how to calculate it fast saves you from sticker shock.",
+          "problem": "A laptop costs $850. Sales tax is 8.5%. What's the total price?",
+          "steps": [
+            { "action": "Convert tax rate to decimal", "math": "8.5% = 0.085", "eli5": "Move the decimal two places left: 8.5% → 0.085. This is the fraction of the price you'll pay in tax." },
+            { "action": "Calculate the tax amount", "math": "$850 × 0.085 = $72.25", "eli5": "850 × 0.08 = 68. 850 × 0.005 = 4.25. Add: $72.25 in tax. That's real money being added to your bill!" },
+            { "action": "Add tax to original price", "math": "$850 + $72.25 = $922.25", "eli5": "Total out-of-pocket = $922.25. Shortcut: multiply by 1.085 directly. 850 × 1.085 = $922.25. Adding 1 keeps the original, the decimal adds the tax." }
+          ],
+          "answer": "$922.25"
+        },
+        {
+          "concept": "Percent Decrease",
+          "desc": "Things go on sale. Stocks drop. Populations decline. Percent decrease measures how much something shrank, relative to where it started.",
+          "problem": "A TV was $600. It's now $450. What's the percent decrease?",
+          "steps": [
+            { "action": "Find the actual drop", "math": "$600 − $450 = $150", "eli5": "The TV dropped $150 in price. But '$150 off' doesn't tell us much without knowing where we started from." },
+            { "action": "Divide the drop by the ORIGINAL price", "math": "$150 ÷ $600 = 0.25", "eli5": "Always divide by the ORIGINAL (the 'before' price). $150 is 0.25 of $600." },
+            { "action": "Convert to percentage", "math": "0.25 × 100 = 25%", "eli5": "The TV dropped 25%. A quarter of its original price was slashed. That's a significant sale — worth buying if you need a TV!" }
+          ],
+          "answer": "25% decrease"
+        },
+        {
+          "concept": "Converting Between Fractions, Decimals, and Percents",
+          "desc": "1/4, 0.25, and 25% are three names for the exact same number. Being able to fluently switch between them makes mental math much faster and lets you work with any format a problem throws at you.",
+          "problem": "Convert 3/8 to a decimal and a percentage.",
+          "steps": [
+            { "action": "Fraction → decimal: divide top by bottom", "math": "3 ÷ 8 = 0.375", "eli5": "3 ÷ 8: 8 doesn't go into 3, so we put a decimal and zeros. 30 ÷ 8 = 3 remainder 6. 60 ÷ 8 = 7 remainder 4. 40 ÷ 8 = 5. Result: 0.375." },
+            { "action": "Decimal → percent: multiply by 100", "math": "0.375 × 100 = 37.5%", "eli5": "Move the decimal two places right: 0.375 → 37.5%. So 3/8 = 37.5%. Three eighths of something is 37.5% of it." },
+            { "action": "Spot-check with a familiar equivalent", "math": "1/2 = 0.5 = 50%,  so 3/8 should be just under 50%", "eli5": "3/8 < 4/8 = 1/2 = 50%. So 37.5% makes sense — it's close to half but a bit less. Sanity checks like this catch arithmetic errors instantly." }
+          ],
+          "answer": "0.375 = 37.5%"
+        },
+        {
+          "concept": "Compound Interest — Money Growing on Money",
+          "desc": "Simple interest pays you a percentage of your starting amount each year. Compound interest pays you interest ON your interest too — it snowballs. This is why starting to save early is so powerful.",
+          "problem": "You invest $1,000 at 5% annual interest, compounded yearly. How much after 3 years?",
+          "steps": [
+            { "action": "Year 1: 5% of $1,000", "math": "$1,000 × 1.05 = $1,050", "eli5": "Multiply by 1.05 (that's 100% + 5% = keeping what you have and adding 5%). After year 1: $1,050." },
+            { "action": "Year 2: 5% of $1,050 now", "math": "$1,050 × 1.05 = $1,102.50", "eli5": "You're now earning interest on $1,050 — not just the original $1,000. The extra $50 from Year 1 is also growing. That's compound interest at work." },
+            { "action": "Year 3: 5% of $1,102.50", "math": "$1,102.50 × 1.05 = $1,157.63", "eli5": "Three years in: $1,157.63. You earned $157.63 on a $1,000 investment. The formula shortcut: A = P(1+r)ⁿ = 1000 × 1.05³." },
+            { "action": "Compare to simple interest", "math": "Simple: $1,000 + 3×$50 = $1,150. Compound: $1,157.63", "eli5": "Only a $7.63 difference at 3 years. But at 30 years: simple = $2,500, compound = $4,322. The gap becomes enormous. Start saving young!" }
+          ],
+          "answer": "$1,157.63"
+        },
+        {
+          "concept": "Percentage Points vs. Percent Change",
+          "desc": "These sound the same but mean very different things — and confusing them is one of the most common errors in news and politics. A tax rate going from 20% to 25% is a 5 percentage point increase, but a 25% percent change.",
+          "problem": "Interest rates rose from 4% to 6%. Is that a 2% increase or a 50% increase?",
+          "steps": [
+            { "action": "The change in raw percentage points", "math": "6% − 4% = 2 percentage points", "eli5": "The rate went up by 2 percentage points. This is the direct subtraction of the two rates. Simple, literal, exact." },
+            { "action": "The percent change (relative increase)", "math": "Change ÷ original = 2 ÷ 4 = 0.5 = 50%", "eli5": "Relative to the original 4%, the increase of 2 is actually 50% of 4. The rate grew by half of itself. This is the percentage change." },
+            { "action": "Both are correct — they measure different things", "math": "2 pp increase  ≠  50% increase  (both true, different meaning)", "eli5": "If you're a borrower, a 50% increase in your interest rate sounds catastrophic. If you're comparing to a policy, '2 percentage points' is more informative. Context determines which matters." },
+            { "action": "Why this matters", "math": "A drug trial: 'risk increased from 2% to 3%' = 1 pp = 50% relative increase", "eli5": "Headlines love relative numbers (50%!) because they sound bigger. Absolute percentage points (1 pp or 2 pp) tell you the real-world magnitude. Always ask: which kind of percent is this?" }
+          ],
+          "answer": "Both: +2 percentage points and +50% relative increase"
+        },
+        {
+          "concept": "Mental Math: Percentage Shortcuts",
+          "desc": "You don't need a calculator for most percentages. A handful of shortcuts let you calculate tips, discounts, and splits in your head — faster than pulling out your phone.",
+          "problem": "Calculate 15% of $64 mentally.",
+          "steps": [
+            { "action": "Find 10% by shifting the decimal", "math": "10% of $64 = $6.40", "eli5": "10% is always just 'move the decimal one place left.' $64.00 → $6.40. This single shortcut is the foundation for most mental percentage math." },
+            { "action": "Find 5% by halving the 10%", "math": "5% of $64 = $3.20", "eli5": "5% is half of 10%. Half of $6.40 = $3.20. So you now have two building blocks: 10% and 5%." },
+            { "action": "Add them: 15% = 10% + 5%", "math": "$6.40 + $3.20 = $9.60", "eli5": "15% = 10% + 5% = $6.40 + $3.20 = $9.60. Boom — no calculator. This works for any multiple of 5%!" },
+            { "action": "Other useful combos", "math": "20% = 2×10%,  1% = 10%÷10,  17% = 10%+5%+1%+1%", "eli5": "Build any percentage from 1%, 5%, and 10% blocks. 17% = 10% + 5% + 1% + 1% = $6.40 + $3.20 + $0.64 + $0.64 = $10.88. You're a human calculator now. 🧠" }
+          ],
+          "answer": "15% of $64 = $9.60"
+        }
+      ]
+    },
+    "trigonometry": {
+      "label": "Trigonometry",
+      "icon": "θ",
+      "color": "#5856d6",
+      "lessons": [
+        {
+          "concept": "What Is Sine?",
+          "desc": "You're standing 10 meters from a tall tree. You look up at a 30° angle to see the top. How tall is the tree? Sine solves this — without climbing it, without measuring it.",
+          "problem": "Angle = 30°, hypotenuse = 10. Find the opposite side.",
+          "steps": [
+            { "action": "SOH: Sine = Opposite / Hypotenuse", "math": "sin(θ) = opposite / hypotenuse", "eli5": "SOH is your memory hook. The 'opposite' side faces the angle, the 'hypotenuse' is the longest side (across from 90°). Sine is their ratio." },
+            { "action": "Plug in what we know", "math": "sin(30°) = opposite / 10", "eli5": "We know the angle (30°) and the hypotenuse (10m). We're solving for the opposite side — the tree's height." },
+            { "action": "sin(30°) = 0.5 — memorize this one", "math": "0.5 = opposite / 10", "eli5": "A few trig values are worth memorizing: sin(30°) = 0.5, sin(45°) ≈ 0.71, sin(60°) ≈ 0.87, sin(90°) = 1." },
+            { "action": "Multiply both sides by 10", "math": "opposite = 10 × 0.5 = 5", "eli5": "The tree is 5 meters tall — figured out from 10 meters away by measuring the angle. That's exactly how surveyors and architects work!" }
+          ],
+          "answer": "Opposite = 5"
+        },
+        {
+          "concept": "What Is Cosine?",
+          "desc": "If sine finds the height (vertical), cosine finds the horizontal distance. Together they can describe any direction in 2D space.",
+          "problem": "Angle = 60°, hypotenuse = 14. Find the adjacent side.",
+          "steps": [
+            { "action": "CAH: Cosine = Adjacent / Hypotenuse", "math": "cos(θ) = adjacent / hypotenuse", "eli5": "The 'adjacent' side is the one right next to the angle (touching it, but not the hypotenuse). CAH = Cosine, Adjacent, Hypotenuse." },
+            { "action": "Plug in the values", "math": "cos(60°) = adjacent / 14", "eli5": "Angle = 60°, hypotenuse = 14. We want the adjacent side — the horizontal ground distance." },
+            { "action": "cos(60°) = 0.5", "math": "0.5 = adjacent / 14", "eli5": "Coincidence: sin(30°) = cos(60°) = 0.5. They're mirror images — because 30° and 60° are complementary angles." },
+            { "action": "Solve for adjacent", "math": "adjacent = 14 × 0.5 = 7", "eli5": "The adjacent side = 7. Horizontal distance is 7 units when hypotenuse is 14 and angle is 60°." }
+          ],
+          "answer": "Adjacent = 7"
+        },
+        {
+          "concept": "What Is Tangent?",
+          "desc": "Tangent skips the hypotenuse entirely — it directly compares height to ground distance. Great when you're standing on the ground measuring angles up to things.",
+          "problem": "Angle = 45°, adjacent side = 8. Find the opposite side.",
+          "steps": [
+            { "action": "TOA: Tangent = Opposite / Adjacent", "math": "tan(θ) = opposite / adjacent", "eli5": "No hypotenuse needed! Tangent directly compares the vertical (opposite) to the horizontal (adjacent). Great for surveying: you know your distance and measure the angle." },
+            { "action": "Plug in what we know", "math": "tan(45°) = opposite / 8", "eli5": "Angle = 45°. Ground distance (adjacent) = 8m. Building height (opposite) = unknown." },
+            { "action": "tan(45°) = 1 exactly — a special case", "math": "1 = opposite / 8", "eli5": "At exactly 45°, opposite = adjacent. They're equal! That's why tan(45°) = 1 — a perfect diagonal." },
+            { "action": "Solve", "math": "opposite = 8 × 1 = 8", "eli5": "The building is 8 meters tall and you're 8 meters away. A 45° angle means you'd be looking at exactly a 45° diagonal. 🏢" }
+          ],
+          "answer": "Opposite = 8"
+        },
+        {
+          "concept": "SOH-CAH-TOA",
+          "desc": "SOH-CAH-TOA is the password to trig. Burn it into your brain and right triangles become trivial — for life.",
+          "problem": "Find angle θ if opposite = 5 and hypotenuse = 13.",
+          "steps": [
+            { "action": "Identify what you have: opposite + hypotenuse = Sine", "math": "sin(θ) = 5/13", "eli5": "Match what you know to SOH-CAH-TOA. We have opposite (5) and hypotenuse (13). That's SOH → use Sine." },
+            { "action": "Calculate the decimal", "math": "5 ÷ 13 ≈ 0.3846", "eli5": "Divide: 5 ÷ 13 ≈ 0.3846. This is the sine value of our mystery angle." },
+            { "action": "Use inverse sine to find the angle", "math": "θ = sin⁻¹(0.3846)", "eli5": "sin⁻¹ (arcsin) undoes sine. On a calculator: [2nd] + [sin] + [0.3846]. Asks: 'what angle has this sine?'" },
+            { "action": "Evaluate", "math": "θ ≈ 22.6°", "eli5": "The angle is about 22.6°. This is the 5-12-13 Pythagorean triple. Missing side? 12. Check: 5²+12²=25+144=169=13². ✓" }
+          ],
+          "answer": "θ ≈ 22.6°"
+        },
+        {
+          "concept": "The Unit Circle — Angles and Coordinates",
+          "desc": "The unit circle is a circle with radius 1 centered at the origin. Every angle has a point on this circle — and the x and y coordinates of that point ARE the cosine and sine of the angle. It's the map of all trig.",
+          "problem": "Find sin(90°) and cos(90°) using the unit circle.",
+          "steps": [
+            { "action": "Draw the unit circle — radius 1, center at origin", "math": "Circle: x² + y² = 1", "eli5": "Any point (x, y) on this circle is exactly 1 unit from the center. The circle has circumference 2π and is the foundation of all periodic math — waves, sound, electricity." },
+            { "action": "Locate 90° on the circle", "math": "90° is straight up — the top of the circle", "eli5": "Starting at 0° (rightmost point), rotate 90° counterclockwise. You end up at the very top of the circle: the point (0, 1)." },
+            { "action": "Read off the coordinates", "math": "(x, y) at 90° = (0, 1)", "eli5": "On the unit circle: x = cos(angle), y = sin(angle). Always. At 90°: the point is (0, 1)." },
+            { "action": "Therefore:", "math": "cos(90°) = 0,   sin(90°) = 1", "eli5": "At 90°, you're pointing straight up: all vertical (sin = 1), no horizontal (cos = 0). Geometrically obvious — the unit circle makes trig visual instead of mysterious." }
+          ],
+          "answer": "sin(90°) = 1,  cos(90°) = 0"
+        },
+        {
+          "concept": "Finding a Missing Angle with Inverse Trig",
+          "desc": "When you KNOW the sides but need the ANGLE, you reverse the trig function. sin⁻¹ undoes sin, cos⁻¹ undoes cos, tan⁻¹ undoes tan. These are also called arcsin, arccos, arctan.",
+          "problem": "A right triangle has adjacent = 5 and hypotenuse = 10. Find angle θ.",
+          "steps": [
+            { "action": "Identify which ratio to use", "math": "We have adjacent and hypotenuse → use cosine (CAH)", "eli5": "Match to SOH-CAH-TOA. Adjacent + Hypotenuse = CAH = Cosine. Set up: cos(θ) = adjacent/hypotenuse." },
+            { "action": "Write the equation", "math": "cos(θ) = 5/10 = 0.5", "eli5": "5 ÷ 10 = 0.5. So the cosine of our mystery angle is 0.5. Now reverse it." },
+            { "action": "Apply inverse cosine", "math": "θ = cos⁻¹(0.5)", "eli5": "What angle has a cosine of 0.5? We need arccos(0.5). This is one of our memorizable values!" },
+            { "action": "Evaluate — this is a special angle", "math": "θ = 60°", "eli5": "cos(60°) = 0.5 is a famous value. θ = 60°. The other angle in the triangle must be 30° (since 60 + 30 + 90 = 180). This is the 30-60-90 special triangle!" }
+          ],
+          "answer": "θ = 60°"
+        },
+        {
+          "concept": "Angles of Elevation and Depression",
+          "desc": "When you look UP at something, the angle between horizontal and your line of sight is the angle of elevation. Looking DOWN, it's the angle of depression. Both are measured from the horizontal — and both use the same trig.",
+          "problem": "You're 30 m from a building. The angle of elevation to the roof is 40°. How tall is the building?",
+          "steps": [
+            { "action": "Identify the triangle", "math": "Adjacent = 30m (ground), θ = 40°, opposite = height", "eli5": "You (at ground level), the base of the building, and the roof form a right triangle. The ground is the adjacent side, the building height is the opposite, and your line of sight is the hypotenuse." },
+            { "action": "Use tangent: opposite/adjacent is known", "math": "tan(40°) = height / 30", "eli5": "TOA: we have the adjacent (30m) and want the opposite (height). Tangent is perfect — it connects those two sides directly." },
+            { "action": "tan(40°) ≈ 0.839", "math": "0.839 = height / 30", "eli5": "tan(40°) ≈ 0.839. This means for every 1 meter of horizontal distance, you gain 0.839 meters of height. Multiply by 30..." },
+            { "action": "Solve for height", "math": "height = 30 × 0.839 ≈ 25.2 m", "eli5": "The building is about 25.2 meters tall. This is literally how engineers measure building heights, how pilots calculate descent angles, and how cameras auto-focus on distant objects." }
+          ],
+          "answer": "≈ 25.2 m"
+        },
+        {
+          "concept": "The 30-60-90 Triangle",
+          "desc": "The 30-60-90 triangle has side ratios that never change: 1 : √3 : 2. Once you know one side, you know all three — without a calculator. It appears constantly in architecture, engineering, and game design.",
+          "problem": "A 30-60-90 triangle has a hypotenuse of 10. Find the other two sides.",
+          "steps": [
+            { "action": "Memorize the fixed ratios: 1 : √3 : 2", "math": "Short leg : Long leg : Hypotenuse = 1 : √3 : 2", "eli5": "The sides are ALWAYS in this ratio — no matter how big or small the triangle. The hypotenuse is always twice the short leg. The long leg is always short leg × √3 ≈ 1.73." },
+            { "action": "Hypotenuse = 10, so the short leg = 5", "math": "short leg = hypotenuse / 2 = 10 / 2 = 5", "eli5": "Since hypotenuse = 2 × short leg, divide by 2: 10 ÷ 2 = 5. The short leg (opposite 30°) = 5." },
+            { "action": "Long leg = short leg × √3", "math": "long leg = 5 × √3 ≈ 5 × 1.732 = 8.66", "eli5": "The long leg (opposite 60°) = 5√3 ≈ 8.66. This ratio is exact — no rounding needed if you leave it as 5√3." },
+            { "action": "Verify with Pythagoras", "math": "5² + (5√3)² = 25 + 75 = 100 = 10²  ✓", "eli5": "25 + 75 = 100 = 10². The theorem confirms it. A 30-60-90 with hypotenuse 10 has legs of 5 and 5√3. Memorize this family — it saves significant calculator time." }
+          ],
+          "answer": "Short leg = 5,  Long leg = 5√3 ≈ 8.66"
+        },
+        {
+          "concept": "The 45-45-90 Triangle",
+          "desc": "Cut a square diagonally and you get a 45-45-90 triangle. Both legs are equal, and the hypotenuse is always leg × √2. This triangle is everywhere: square rooms, baseball diamonds, tilted screens.",
+          "problem": "A 45-45-90 triangle has legs of 6. Find the hypotenuse.",
+          "steps": [
+            { "action": "Both legs equal — it's an isoceles right triangle", "math": "leg₁ = leg₂ = 6", "eli5": "In a 45-45-90 triangle, the two acute angles are equal (both 45°), so the two legs facing them are also equal. A perfectly symmetric right triangle." },
+            { "action": "Use the Pythagorean theorem", "math": "6² + 6² = c²   →   36 + 36 = c²   →   c² = 72", "eli5": "a² + b² = c². Both a and b are 6: 36 + 36 = 72. So the hypotenuse squared = 72." },
+            { "action": "Take the square root", "math": "c = √72 = √(36 × 2) = 6√2 ≈ 8.49", "eli5": "√72: split into √36 × √2 = 6√2. Numerically: 6 × 1.414 ≈ 8.49. This is why the ratio is leg × √2." },
+            { "action": "The shortcut: hypotenuse = leg × √2", "math": "6 × √2 ≈ 8.49", "eli5": "For ANY 45-45-90 triangle: hypotenuse = leg × √2. If you have the hypotenuse and need the leg: leg = hypotenuse ÷ √2. Tile installers use this daily." }
+          ],
+          "answer": "Hypotenuse = 6√2 ≈ 8.49"
+        },
+        {
+          "concept": "Radians vs Degrees",
+          "desc": "Degrees (360 in a circle) are intuitive but arbitrary. Radians are based on the actual geometry of a circle. Higher-level math — calculus, physics, engineering — almost exclusively uses radians. Time to meet them.",
+          "problem": "Convert 180° to radians. Then convert π/3 radians to degrees.",
+          "steps": [
+            { "action": "The key relationship: π radians = 180°", "math": "π rad = 180°", "eli5": "A semicircle (half turn) = π radians = 180°. This is the bridge between the two systems. One radian is about 57.3° — the angle where the arc length equals the radius." },
+            { "action": "Convert 180° to radians", "math": "180° × (π/180) = π radians", "eli5": "Multiply degrees by (π/180). The 180s cancel: 180 × π/180 = π. So 180° = π radians. This is why you'll often see π scattered throughout physics formulas." },
+            { "action": "Convert π/3 radians to degrees", "math": "π/3 × (180/π) = 180/3 = 60°", "eli5": "Multiply radians by (180/π). The π cancels: (π/3) × (180/π) = 180/3 = 60°. So π/3 radians = 60°." },
+            { "action": "The conversion rules", "math": "degrees → radians: × π/180   |   radians → degrees: × 180/π", "eli5": "Memorize just ONE thing: π = 180°. From there, divide or multiply to convert. Everything else follows." }
+          ],
+          "answer": "180° = π rad;  π/3 rad = 60°"
+        }
+      ]
+    },
+    "numbertheory": {
+      "label": "Number Theory",
+      "icon": "∞",
+      "color": "#1a7f47",
+      "lessons": [
+        {
+          "concept": "Prime Numbers",
+          "desc": "A prime number only has two factors: 1 and itself. It refuses to break into equal groups. Primes are math's fundamental loners — and every other number is secretly built from them.",
+          "problem": "Is 37 a prime number?",
+          "steps": [
+            { "action": "Smart shortcut: only check up to √37", "math": "√37 ≈ 6.1  →  only check 2, 3, and 5", "eli5": "If 37 had a factor bigger than 6, it would also have one smaller (they come in pairs). So we only need to check divisors up to √37 ≈ 6. Just three checks." },
+            { "action": "Is 37 divisible by 2?", "math": "37 ends in 7 (odd) → NO", "eli5": "Even numbers end in 0, 2, 4, 6, or 8. 37 ends in 7 — it's odd. Eliminated instantly." },
+            { "action": "Is 37 divisible by 3?", "math": "3 + 7 = 10,  10 ÷ 3 is not whole → NO", "eli5": "Divisibility trick for 3: add the digits. 3+7=10. Is 10 divisible by 3? No. So 3 doesn't divide into 37." },
+            { "action": "Is 37 divisible by 5?", "math": "37 ends in 7, not 0 or 5 → NO  →  37 is prime! 🎉", "eli5": "Numbers divisible by 5 always end in 0 or 5. 37 ends in 7. Nope! We've checked all candidates up to √37. 37 is PRIME." }
+          ],
+          "answer": "Yes, 37 is prime"
+        },
+        {
+          "concept": "Greatest Common Factor",
+          "desc": "You have 24 apples and 36 oranges. You want to make identical gift bags — same number of each, nothing left over. The GCF tells you the maximum number of bags you can make.",
+          "problem": "Find the GCF of 24 and 36.",
+          "steps": [
+            { "action": "List all factors of 24", "math": "1, 2, 3, 4, 6, 8, 12, 24", "eli5": "Factors divide in without a remainder. For 24: try 1 (1×24), 2 (2×12), 3 (3×8), 4 (4×6). You get: 1,2,3,4,6,8,12,24." },
+            { "action": "List all factors of 36", "math": "1, 2, 3, 4, 6, 9, 12, 18, 36", "eli5": "For 36: 1×36, 2×18, 3×12, 4×9, 6×6. You get: 1,2,3,4,6,9,12,18,36." },
+            { "action": "Find what both lists share", "math": "Common factors: 1, 2, 3, 4, 6, 12", "eli5": "These numbers appear in BOTH lists. Any of these would let you split both groups equally." },
+            { "action": "Pick the biggest one", "math": "GCF = 12", "eli5": "GCF = 12. You can make 12 bags with 2 apples and 3 oranges each. 12 × 2 = 24 apples, 12 × 3 = 36 oranges. Nothing left over. 🎁" }
+          ],
+          "answer": "GCF = 12"
+        },
+        {
+          "concept": "Least Common Multiple",
+          "desc": "Bus A comes every 4 minutes. Bus B comes every 6 minutes. Both just arrived together. When's the next time they arrive at the same time? The LCM tells you.",
+          "problem": "Find the LCM of 4 and 6.",
+          "steps": [
+            { "action": "List multiples of 4", "math": "4, 8, 12, 16, 20, 24…", "eli5": "Multiples of 4 = skip-counting by 4. Bus A arrives at minutes: 4, 8, 12, 16, 20…" },
+            { "action": "List multiples of 6", "math": "6, 12, 18, 24, 30…", "eli5": "Skip-count by 6. Bus B arrives at minutes: 6, 12, 18, 24…" },
+            { "action": "Find the first match", "math": "First overlap = 12  ✓", "eli5": "Minute 12 appears on BOTH lists! LCM = 12. If you just missed them, you wait 12 minutes. 🚌🚌" }
+          ],
+          "answer": "LCM = 12"
+        },
+        {
+          "concept": "Even & Odd Patterns",
+          "desc": "Even and odd numbers follow strict rules when you add or multiply them. Once you know the rules, you can predict results without doing any arithmetic.",
+          "problem": "Without calculating, is (27 × 34 + 15) even or odd?",
+          "steps": [
+            { "action": "27 is odd, 34 is even — what's odd × even?", "math": "odd × even = always EVEN", "eli5": "Rules: odd×odd=odd, even×even=even, odd×even=EVEN. Any even number has a factor of 2. Multiply anything by an even number → always a multiple of 2 = even." },
+            { "action": "27×34 is even. Now add 15 (odd)", "math": "even + odd = ?", "eli5": "More rules: even+even=even, odd+odd=even, even+odd=ODD. Add one extra (odd) and there's always one left hanging." },
+            { "action": "Conclusion: even + odd = ODD", "math": "(27 × 34 + 15) is ODD — no arithmetic needed! 🧠", "eli5": "We figured that out without a calculator. These parity rules work for any numbers, any size. That's number theory magic!" }
+          ],
+          "answer": "Odd  (no calculator needed!)"
+        },
+        {
+          "concept": "Divisibility Rules — The Shortcuts",
+          "desc": "Divisibility rules let you check if a number is divisible by 2, 3, 4, 5, 6, 9, or 10 without doing any division. These are tricks mathematicians discovered by studying number patterns.",
+          "problem": "Is 732 divisible by 2? By 3? By 9?",
+          "steps": [
+            { "action": "Divisible by 2? Check if it's even", "math": "732 ends in 2 (even) → YES", "eli5": "Rule for 2: last digit is 0, 2, 4, 6, or 8. 732 ends in 2. Divisible by 2. Simple as checking one digit." },
+            { "action": "Divisible by 3? Sum the digits", "math": "7 + 3 + 2 = 12.   12 ÷ 3 = 4 → YES", "eli5": "Rule for 3: add ALL the digits. If the sum is divisible by 3, so is the whole number. 7+3+2=12, and 12÷3=4. So 732 is divisible by 3." },
+            { "action": "Divisible by 9? Sum the digits again", "math": "7 + 3 + 2 = 12.   12 ÷ 9 is not whole → NO", "eli5": "Rule for 9: same as 3, but the digit sum must be divisible by 9. 12 ÷ 9 = 1 remainder 3. Not divisible by 9." },
+            { "action": "Bonus: divisible by 6?", "math": "732 ÷ 2 ✓ and ÷ 3 ✓ → YES, divisible by 6", "eli5": "Rule for 6: divisible by BOTH 2 AND 3. 732 passes both tests, so it's divisible by 6. You can verify: 732 ÷ 6 = 122. ✓" }
+          ],
+          "answer": "Yes (÷2), Yes (÷3), No (÷9)"
+        },
+        {
+          "concept": "Prime Factorization",
+          "desc": "Every whole number greater than 1 is either prime, or can be built by multiplying primes together. 12 = 2 × 2 × 3. This 'prime recipe' is always unique — like a fingerprint. It's the foundation of GCF, LCM, and cryptography.",
+          "problem": "Find the prime factorization of 60.",
+          "steps": [
+            { "action": "Divide by the smallest prime that fits", "math": "60 ÷ 2 = 30", "eli5": "Start with 2 — the smallest prime. Does 2 divide into 60? Yes (60 is even). 60 = 2 × 30. Now do the same to 30." },
+            { "action": "Keep dividing", "math": "30 ÷ 2 = 15,   then 15 ÷ 3 = 5", "eli5": "30 is even: 30 = 2 × 15. Now 15: not even, try 3. 1+5=6, divisible by 3! 15 = 3 × 5. And 5 is prime — we stop." },
+            { "action": "Collect all the prime factors", "math": "60 = 2 × 2 × 3 × 5 = 2² × 3 × 5", "eli5": "The full recipe for 60: two 2s, one 3, one 5. Written cleanly: 2² × 3 × 5. Every time you break 60 down this way, you get the exact same answer." },
+            { "action": "Verify by multiplying back", "math": "2 × 2 × 3 × 5 = 4 × 15 = 60  ✓", "eli5": "4 × 15 = 60. Confirmed! The Fundamental Theorem of Arithmetic says this prime fingerprint is unique — no other combination of primes multiplies to 60." }
+          ],
+          "answer": "60 = 2² × 3 × 5"
+        },
+        {
+          "concept": "The Euclidean Algorithm",
+          "desc": "The Euclidean Algorithm is a 2,300-year-old method to find the GCF of two large numbers — without factoring them. It's one of the oldest algorithms still in active use (including in encryption today).",
+          "problem": "Find the GCF of 48 and 18 using the Euclidean Algorithm.",
+          "steps": [
+            { "action": "Divide the larger number by the smaller", "math": "48 ÷ 18 = 2 remainder 12", "eli5": "48 = 18 × 2 + 12. The remainder is 12. The key insight: GCF(48, 18) = GCF(18, 12). The GCF doesn't change when you replace the bigger number with the remainder." },
+            { "action": "Repeat: divide 18 by 12", "math": "18 ÷ 12 = 1 remainder 6", "eli5": "18 = 12 × 1 + 6. Remainder is 6. So GCF(18, 12) = GCF(12, 6)." },
+            { "action": "Repeat: divide 12 by 6", "math": "12 ÷ 6 = 2 remainder 0", "eli5": "12 = 6 × 2 + 0. Remainder is 0. When the remainder hits 0, we're done!" },
+            { "action": "The GCF is the last non-zero remainder", "math": "GCF(48, 18) = 6", "eli5": "The last non-zero remainder = 6. So GCF(48, 18) = 6. This algorithm handles huge numbers (think 10-digit) in just a few steps — it's why it's still used in cryptography." }
+          ],
+          "answer": "GCF = 6"
+        },
+        {
+          "concept": "Perfect Numbers",
+          "desc": "A perfect number equals the sum of all its proper factors (divisors except itself). 6 = 1 + 2 + 3. Perfect numbers are vanishingly rare — only a handful are known — and they've fascinated mathematicians for 2,500 years.",
+          "problem": "Show that 28 is a perfect number.",
+          "steps": [
+            { "action": "List all proper factors of 28", "math": "Factors of 28: 1, 2, 4, 7, 14 (not 28 itself)", "eli5": "Proper factors = all divisors except the number itself. For 28: 1×28, 2×14, 4×7. Proper factors: 1, 2, 4, 7, 14." },
+            { "action": "Add them all up", "math": "1 + 2 + 4 + 7 + 14 = 28", "eli5": "1+2=3, +4=7, +7=14, +14=28. The sum equals 28 exactly. 28 is a perfect number!" },
+            { "action": "The known perfect numbers are rare", "math": "6, 28, 496, 8128, 33,550,336…", "eli5": "There are only a few known perfect numbers — all of them even. No odd perfect number has ever been found, and no one has proven they don't exist. One of math's oldest open questions!" },
+            { "action": "Connection to Mersenne primes", "math": "28 = 4 × 7 = 2²(2³−1)", "eli5": "Every even perfect number is tied to a Mersenne prime (a prime of the form 2ⁿ−1). 2³−1 = 7 is prime, so 2²×7 = 28 is perfect. The hunt for large perfect numbers IS the hunt for large primes." }
+          ],
+          "answer": "28 = 1+2+4+7+14 ✓ Perfect!"
+        },
+        {
+          "concept": "Modular Arithmetic — Clock Math",
+          "desc": "On a 12-hour clock, 10 o'clock + 5 hours = 3 o'clock, not 15. That's modular arithmetic — where numbers wrap around after hitting a limit. It powers everything from encryption to checksums to day-of-week calculations.",
+          "problem": "Today is Wednesday. What day is it 100 days from now?",
+          "steps": [
+            { "action": "Assign numbers to days (Wednesday = 3)", "math": "Mon=1, Tue=2, Wed=3, Thu=4, Fri=5, Sat=6, Sun=0", "eli5": "We'll use 0–6 for the 7 days (mod 7). Wednesday = 3. We want to figure out 3 + 100, then wrap around." },
+            { "action": "Divide 100 by 7 and find the remainder", "math": "100 ÷ 7 = 14 remainder 2", "eli5": "14 complete weeks = 98 days (exact same day of the week). The leftover 2 days are what actually move us forward. 100 mod 7 = 2." },
+            { "action": "Add the remainder to the starting day", "math": "3 + 2 = 5 → Friday", "eli5": "Wednesday (3) + 2 days forward = Friday (5). So 100 days from Wednesday is a Friday!" },
+            { "action": "Real world: this is how calendars work", "math": "The '100 mod 7' step is the key — only remainders matter", "eli5": "Same logic tells you: born on a Tuesday? Birthday in 365 days = Tuesday (365 mod 7 = 1, so +1 day: Wednesday). This math drives scheduling software, crypto, and barcode checksums." }
+          ],
+          "answer": "Friday"
+        },
+        {
+          "concept": "Fibonacci Sequence",
+          "desc": "Start with 0 and 1. Each new number is the sum of the two before it. Simple rule, endlessly surprising consequences — Fibonacci numbers appear in flower petals, shell spirals, stock markets, and computer algorithms.",
+          "problem": "List the first 10 Fibonacci numbers and find the 10th.",
+          "steps": [
+            { "action": "The rule: each number = sum of the two before it", "math": "F(n) = F(n−1) + F(n−2)", "eli5": "Starting seeds: 0, 1. Then: 0+1=1, 1+1=2, 1+2=3, 2+3=5, 3+5=8, 5+8=13, 8+13=21, 13+21=34. Each term adds the previous two." },
+            { "action": "List them out", "math": "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", "eli5": "Ten terms: 0 (1st), 1 (2nd), 1 (3rd), 2 (4th), 3 (5th), 5 (6th), 8 (7th), 13 (8th), 21 (9th), 34 (10th)." },
+            { "action": "Consecutive ratios approach the Golden Ratio", "math": "34/21 ≈ 1.619… → φ = 1.6180339…", "eli5": "Divide any Fibonacci number by the previous one: 34/21 ≈ 1.619. As you go further, this ratio approaches φ (phi) = 1.618… — the famous Golden Ratio found in art, architecture, and nature." },
+            { "action": "Where Fibonacci numbers appear in nature", "math": "Sunflower seeds: 34 spirals one way, 55 the other — both Fibonacci!", "eli5": "Flower petals come in Fibonacci counts (3, 5, 8, 13…). Pinecone scales: Fibonacci spirals. Nautilus shells: Fibonacci proportions. The sequence emerges wherever nature packs things efficiently." }
+          ],
+          "answer": "10th Fibonacci number = 34"
+        }
+      ]
+    }
+  },
+  "rotation": ["algebra", "geometry", "fractions", "statistics", "percentages", "trigonometry", "numbertheory"],
+  "meta": {
+    "totalSubjects": 7,
+    "totalLessons": 70,
+    "version": "1.0.0"
+  }
+}
