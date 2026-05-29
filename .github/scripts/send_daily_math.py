@@ -14,8 +14,9 @@ with open("lessons.json") as f:
 # Seed with today's date so a re-run sends the same problem
 rng = random.Random(date.today().toordinal())
 
-subject_key = rng.choice(list(data.keys()))
-subject     = data[subject_key]
+subjects    = data["subjects"]
+subject_key = rng.choice(list(subjects.keys()))
+subject     = subjects[subject_key]
 lesson      = rng.choice(subject["lessons"])
 
 # ── Build email HTML ───────────────────────────────────────────────────────────
