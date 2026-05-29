@@ -249,6 +249,31 @@ function buildLesson(subjectKey) {
   section.style.display = 'none';
 }
 
+// ─── Email signup wall ────────────────────────────────────────────────────────
+
+function dismissWall() {
+  const overlay = document.getElementById('wallOverlay');
+  overlay.classList.add('dismissed');
+  overlay.addEventListener('animationend', () => overlay.remove(), { once: true });
+  sessionStorage.setItem('mm-wall-seen', '1');
+}
+
+function handleWallSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('wallEmail').value.trim();
+  if (!email) return;
+  document.getElementById('wallForm').style.display = 'none';
+  document.getElementById('wallSuccess').classList.add('visible');
+  localStorage.setItem('mm-signed-up', '1');
+  setTimeout(dismissWall, 2200);
+}
+
+function maybeShowWall() {
+  if (localStorage.getItem('mm-signed-up') || sessionStorage.getItem('mm-wall-seen')) {
+    document.getElementById('wallOverlay').remove();
+  }
+}
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 function init() {
@@ -261,6 +286,8 @@ function init() {
   const { subjectKey } = getTodayLesson();
   activeSubject = subjectKey;
   buildLesson(subjectKey);
+
+  maybeShowWall();
 }
 
 document.addEventListener('DOMContentLoaded', init);
