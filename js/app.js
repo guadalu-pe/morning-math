@@ -288,6 +288,10 @@ function init() {
   buildLesson(subjectKey);
 
   maybeShowWall();
+
+  if (new URLSearchParams(window.location.search).get('reveal') === 'true') {
+    revealSolution();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

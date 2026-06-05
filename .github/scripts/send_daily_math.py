@@ -97,19 +97,11 @@ html_body = f"""
             {steps_html}
           </table>
 
-          <!-- Answer -->
-          <div style="margin-top:28px;padding:20px;background:#f5f5f7;border-radius:12px;text-align:center;">
-            <div style="font-size:12px;font-weight:600;color:#6e6e73;margin-bottom:6px;">Answer</div>
-            <div style="font-size:22px;font-weight:700;color:#0071e3;font-family:'Courier New',monospace;">
-              {lesson['answer']}
-            </div>
-          </div>
-
-          <!-- CTA -->
+          <!-- Reveal answer CTA -->
           <div style="margin-top:28px;text-align:center;">
-            <a href="{site_url}" style="display:inline-block;padding:13px 28px;background:#0071e3;color:#ffffff;
+            <a href="{site_url}?reveal=true" style="display:inline-block;padding:13px 28px;background:#0071e3;color:#ffffff;
                border-radius:980px;font-size:14px;font-weight:600;text-decoration:none;letter-spacing:-0.01em;">
-              Try another problem ↗
+              Reveal Answer ↗
             </a>
           </div>
 
