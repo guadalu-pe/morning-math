@@ -42,7 +42,7 @@ steps_html = "".join(
         </table>
       </td>
     </tr>"""
-    for i, step in enumerate(lesson["steps"])
+    for i, step in enumerate(lesson["steps"][:-1])
 )
 
 today_str  = date.today().strftime("%A, %B %-d")
