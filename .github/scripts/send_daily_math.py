@@ -1,4 +1,4 @@
-import json, os, random, urllib.request, urllib.error
+import base64, json, os, random, urllib.request, urllib.error
 from datetime import date
 
 API_KEY   = os.environ["MAILCHIMP_API_KEY"]
@@ -45,8 +45,7 @@ steps_html = "".join(
     for i, step in enumerate(lesson["steps"])
 )
 
-today_str  = date.today().strftime("%A, %B %-d")
-site_url   = "https://guadalu-pe.github.io/morning-math/"
+today_str = date.today().strftime("%A, %B %-d")
 
 html_body = f"""
 <!DOCTYPE html>
@@ -97,12 +96,10 @@ html_body = f"""
             {steps_html}
           </table>
 
-          <!-- Reveal answer CTA -->
-          <div style="margin-top:28px;text-align:center;">
-            <a href="{site_url}?reveal=true" style="display:inline-block;padding:13px 28px;background:#0071e3;color:#ffffff;
-               border-radius:980px;font-size:14px;font-weight:600;text-decoration:none;letter-spacing:-0.01em;">
-              Reveal Answer ↗
-            </a>
+          <!-- Answer -->
+          <div style="margin-top:28px;background:#f5f5f7;border-radius:12px;padding:20px 24px;text-align:center;">
+            <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#6e6e73;margin-bottom:8px;">Answer</div>
+            <div style="font-size:22px;font-weight:700;color:#1d1d1f;letter-spacing:-0.02em;">{lesson['answer']}</div>
           </div>
 
         </td></tr>
@@ -124,7 +121,6 @@ html_body = f"""
 
 # ── Mailchimp API helpers ──────────────────────────────────────────────────────
 
-import base64
 auth = base64.b64encode(f"anystring:{API_KEY}".encode()).decode()
 headers = {"Authorization": f"Basic {auth}", "Content-Type": "application/json"}
 
